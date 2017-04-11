@@ -1,29 +1,80 @@
 <template>
     <div class="topicCard">
-      <div class="topicCardUser">
-        <mu-avatar slot="left" src="/images/uicon.jpg" class="topicCardUserImg"/>
-        <p class="topicCardUserName">UserName</p>
-        <span class="topicCardTime">4月11日</span>
-      </div>
+      <ul>
+        <li>
+          <div class="topicCardAll">
+          <div class="topicCardUser">
+            <div class="topicCardUserImg">
+              <mu-avatar slot="left" src="/images/uicon.jpg" />
+            </div>
+            <div class="topicCardUserRight">
+              <p class="topicCardUserName">LeachZhou</p>
+              <p class="topicCardTime">4月11日</p>
+            </div>
+          </div>
+
+          <div class="topicCardContent">
+            <p>
+              亲爱的让你等久了我来了 <br>
+              亲爱的让你等久了我来了 <br>
+              亲爱的让你等久了我来了 <br>
+              亲爱的让你等久了我来了 <br>
+              亲爱的让你等久了我来了 <br>
+            </p>
+          </div>
+          </div>
+          <div class="topicCardBorder"></div>
+        </li>
+        <li>
+          <div class="topicCardAll">
+          <div class="topicCardUser">
+            <div class="topicCardUserImg">
+              <mu-avatar slot="left" src="/images/uicon.jpg" />
+            </div>
+            <div class="topicCardUserRight">
+              <p class="topicCardUserName">LeachZhou</p>
+              <p class="topicCardTime">4月11日</p>
+            </div>
+          </div>
+
+          <div class="topicCardContent">
+            <p>
+              亲爱的让你等久了我来了 <br>
+              亲爱的让你等久了我来了 <br>
+              亲爱的让你等久了我来了 <br>
+              亲爱的让你等久了我来了 <br>
+              亲爱的让你等久了我来了 <br>
+            </p>
+          </div>
+          </div>
+          <div class="topicCardBorder"></div>
+        </li>
+
+      </ul>
+
     </div>
 </template>
 <style lang="less" >
-  .topicCard{
+  .topicCardAll{
     margin: 3% 5%;
-  }
-  .topicCardUser{
-
   }
   .topicCardUserImg{
     float: left;
   }
-  .topicCardUserName{
+  .topicCardUserRight{
     float: left;
-    margin-left: 3%;
+    margin-left: 20px;
   }
   .topicCardTime{
     font-size: 10px;
-
+    color: #818181;
+  }
+  .topicCardContent{
+    clear: both;
+    margin-left: 60px;
+  }
+  .topicCardBorder{
+    border-bottom: 1px solid #dedede;
   }
 </style>
 <script type="text/ecmascript-6">
