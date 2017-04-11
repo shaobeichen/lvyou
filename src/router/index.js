@@ -27,10 +27,10 @@ export default new Router({
       }
     },
     {
-      path: "/travels",
-      name: "travels",
+      path: "/goods",
+      name: "goods",
       component: (resolve) => {
-        require(["../components/travels.vue"], resolve);
+        require(["../components/goods.vue"], resolve);
       }
     },
     {

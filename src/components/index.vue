@@ -3,11 +3,7 @@
     <spinner v-if='tranform'></spinner>
     <publicheader :menushow="menushow" :headtitle="headtitle" ></publicheader>
     <div v-if='!tranform'>
-      <swiper class="swiperTop">
-        <swiper-slide class="lvSlide">Slide 1</swiper-slide>
-        <swiper-slide class="lvSlide">Slide 2</swiper-slide>
-        <swiper-slide class="lvSlide">Slide 3</swiper-slide>
-      </swiper>
+      <swiper></swiper>
 
       <mu-flexbox :gutter="0">
         <mu-flexbox-item class="flex-demo1">
@@ -43,11 +39,7 @@
 </template>
 <style  lang="less" >
     @import './../assets/css/public.css';
-    .lvSlide{
-      width: 100%;
-      height:100px;
-      background: #00cfff;
-    }
+
     .flex-demo1{
       height: 100px;
       background-color: #565645;
@@ -99,6 +91,7 @@
 </style>
 <script type="text/ecmascript-6">
   import spinner from './public/spinner'
+  import swiper from './public/swiper'
   import publicheader from './public/publicHeader'
   import publictitle from './public/publicTitle'
 
@@ -127,6 +120,7 @@
     },
     components: {
       spinner,
+      swiper,
       publicheader,
       publictitle
     }
