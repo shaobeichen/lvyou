@@ -8,6 +8,7 @@
 
       <publictitle :publictitle="publictitle"></publictitle>
       <topiccard></topiccard>
+      <addbutton></addbutton>
     </div>
 </template>
 <style lang="less">
@@ -18,6 +19,7 @@
   import topicbanner from './public/topicBanner.vue'
   import publictitle from './public/publicTitle'
   import topiccard from './public/topicCard'
+  import addbutton from './public/addButton'
 
   export default{
     data() {
@@ -34,7 +36,8 @@
       publicheader,
       topicbanner,
       publictitle,
-      topiccard
+      topiccard,
+      addbutton
     }
   }
 </script>
