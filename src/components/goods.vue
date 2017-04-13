@@ -12,7 +12,7 @@
         </mu-flexbox-item>
       </mu-flexbox>
       <publictitle :publictitle="publictitle"></publictitle>
-
+      <goodslist></goodslist>
     </div>
 </template>
 <style lang="less">
@@ -35,6 +35,7 @@
   import publicheader from './public/publicHeader'
   import swiper from './public/swiper'
   import publictitle from './public/publicTitle'
+  import goodslist from './public/goodsList'
 
     export default{
       data() {
@@ -47,7 +48,8 @@
       components: {
         publicheader,
         swiper,
-        publictitle
+        publictitle,
+        goodslist
       }
     }
 </script>
