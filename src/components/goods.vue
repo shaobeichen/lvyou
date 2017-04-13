@@ -4,7 +4,7 @@
       <swiper></swiper>
       <mu-flexbox :gutter="0">
         <mu-flexbox-item class="flexItem">
-          <mu-flat-button label="干货分类" class="flatButton" icon="folder" primary />
+          <mu-flat-button label="干货分类" class="typeButton" icon="folder" primary />
           <div class="borderRight"></div>
         </mu-flexbox-item>
         <mu-flexbox-item class="flexItem" gutter="0">
@@ -12,7 +12,12 @@
         </mu-flexbox-item>
       </mu-flexbox>
       <publictitle :publictitle="publictitle"></publictitle>
-      <goodslist></goodslist>
+      <ul>
+        <li><goodslist></goodslist></li>
+        <li><goodslist></goodslist></li>
+        <li><goodslist></goodslist></li>
+        <li><goodslist></goodslist></li>
+      </ul>
     </div>
 </template>
 <style lang="less">
@@ -23,11 +28,16 @@
     height: 60px;
     line-height: 60px;
   }
-  .flatButton{
+  .typeButton{
     width: 100%;
     height: 100%;
     border-bottom: 1px solid #dedede;
     border-right: 1px solid #dedede;
+  }
+  .flatButton {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #dedede;
   }
 
 </style>
