@@ -25,7 +25,7 @@
       <publictitle :publictitle="publictitle"></publictitle>
 
 
-      <div class="indexContent" v-for="item in xin_body">
+      <div class="indexContent borderBottom1px" v-for="item in xin_body">
         <div class="indexContentImg">
           <img src="../assets/logo.png" >
         </div>
@@ -48,7 +48,6 @@
     }
     .indexContent{
       background: #fff;
-      border-bottom: 1px solid #dedede;
     }
     .indexContentImg{
       text-align:center;

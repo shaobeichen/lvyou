@@ -1,7 +1,7 @@
 <template>
     <div class="topicCard">
       <ul>
-        <li>
+        <li class="borderBottom1px">
           <div class="topicCardAll">
           <div class="topicCardUser">
             <div class="topicCardUserImg">
@@ -23,9 +23,8 @@
             </p>
           </div>
           </div>
-          <div class="topicCardBorder"></div>
         </li>
-        <li>
+        <li class="borderBottom1px">
           <div class="topicCardAll">
           <div class="topicCardUser">
             <div class="topicCardUserImg">
@@ -47,7 +46,6 @@
             </p>
           </div>
           </div>
-          <div class="topicCardBorder"></div>
         </li>
 
       </ul>
@@ -55,6 +53,8 @@
     </div>
 </template>
 <style lang="less" >
+  @import '../../assets/css/public.css';
+
   .topicCardAll{
     margin: 3% 5%;
   }
@@ -73,9 +73,9 @@
     clear: both;
     margin-left: 60px;
   }
-  .topicCardBorder{
-    border-bottom: 1px solid #dedede;
-  }
+  /*.topicCardBorder{*/
+    /*border-bottom: 1px solid #dedede;*/
+  /*}*/
 </style>
 <script type="text/ecmascript-6">
     export default{
