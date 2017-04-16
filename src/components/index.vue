@@ -56,37 +56,6 @@
       padding: 0 50px;
     }
 
-
-    .co-movies-wrap {
-      text-decoration: none;
-      font-size: 0;
-    }
-    .co-movies-show {
-      background-color: #f8f8f8;
-      cursor: pointer;
-      font-size: 0;
-      padding: 10px 20px;
-    }
-    .co-movies-show-child {
-      display: flex;
-      align-items: flex-end;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #d6d6d6;
-    }
-    .co-movieMsg {
-      flex: 1;
-      padding-left: 20px;
-      vertical-align: top;
-    }
-    .co-movieMsg h2 {
-      font-size: 20px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-    .co-movies-show p {
-      font-size: 14px;
-      color: #666;
-    }
 </style>
 <script type="text/ecmascript-6">
   import spinner from './public/spinner'

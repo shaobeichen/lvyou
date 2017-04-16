@@ -17,7 +17,7 @@
           <mu-bottom-nav-item value="index" title="发现" icon="search" href='#/index'/>
           <mu-bottom-nav-item value="topic" title="话题" icon="chats" href='#/topic'/>
           <mu-bottom-nav-item value="goods" title="干货" icon="extension" href='#/goods'/>
-          <mu-bottom-nav-item value="user" title="用户" icon="person" href='#/user'/>
+          <!--<mu-bottom-nav-item value="user" title="用户" icon="person" href='#/user'/>-->
 
         </mu-bottom-nav>
       </mu-paper>
