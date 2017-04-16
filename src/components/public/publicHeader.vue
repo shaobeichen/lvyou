@@ -4,13 +4,34 @@
         <mu-icon-button icon='menu' slot="left" v-if='menushow' @click="toggle(true)"/>
       </mu-appbar>
 
-      <!--<mu-raised-button label="undocked drawer" @click="toggle(true)"/>-->
       <mu-drawer :open="open" :docked="docked" @close="toggle()">
-        <mu-list @itemClick="docked ? '' : toggle()">
-          <mu-list-item title="Menu Item 1"/>
-          <mu-list-item title="Menu Item 2"/>
-          <mu-list-item title="Menu Item 3"/>
-          <mu-list-item v-if="docked" @click.native="open = false" title="Close"/>
+        <div class="drawerBg">
+          <div class="drawerUserImg">
+            <mu-avatar src="../../assets/logo.png" slot="leftAvatar" :size="60"/>
+          </div>
+          <div class="drawerUsername">
+            LeachZhou
+          </div>
+        </div>
+        <mu-list>
+          <mu-list-item title="我的消息">
+            <mu-icon value="home" slot="left"/>
+          </mu-list-item>
+          <mu-list-item title="我的消息">
+            <mu-icon value="home" slot="left"/>
+          </mu-list-item>
+          <mu-list-item title="我的消息">
+            <mu-icon value="home" slot="left"/>
+          </mu-list-item>
+          <mu-list-item title="我的消息">
+            <mu-icon value="home" slot="left"/>
+          </mu-list-item>
+          <mu-list-item title="设置">
+            <mu-icon value="home" slot="left"/>
+          </mu-list-item>
+          <mu-list-item title="退出登录">
+            <mu-icon value="home" slot="left"/>
+          </mu-list-item>
         </mu-list>
       </mu-drawer>
     </div>
@@ -22,6 +43,23 @@
     top: 0;
     left: 0;
     z-index:999;
+  }
+  .drawerBg{
+    position: relative;
+    width:100%;
+    height: 25%;
+    background: #03A9F4;
+  }
+  .drawerUserImg{
+    position: absolute;
+    left: 10%;
+    bottom: 25%;
+  }
+  .drawerUsername{
+    position: absolute;
+    left: 10%;
+    bottom: 12%;
+    color: #dedede;
   }
 </style>
 <script type="text/ecmascript-6">
@@ -38,7 +76,6 @@
           this.docked = !flag;
         }
       },
-      props:[ 'menushow', 'headtitle' ],
-
+      props:[ 'menushow', 'headtitle' ]
     }
 </script>
