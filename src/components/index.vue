@@ -6,24 +6,23 @@
       <swiper></swiper>
 
       <mu-flexbox :gutter="0">
-        <mu-flexbox-item class="flex-demo1">
+        <mu-flexbox-item class="flexItem">
           1
         </mu-flexbox-item>
-        <mu-flexbox-item class="flex-demo1" gutter="0">
+        <mu-flexbox-item class="flexItem" gutter="0">
           2
         </mu-flexbox-item>
       </mu-flexbox>
       <mu-flexbox :gutter="0">
-        <mu-flexbox-item class="flex-demo1">
+        <mu-flexbox-item class="flexItem">
           3
         </mu-flexbox-item>
-        <mu-flexbox-item class="flex-demo1">
+        <mu-flexbox-item class="flexItem">
           4
         </mu-flexbox-item>
       </mu-flexbox>
 
       <publictitle :publictitle="publictitle"></publictitle>
-
 
       <div class="indexContent borderBottom1px" v-for="item in xin_body">
         <div class="indexContentImg">
@@ -40,7 +39,7 @@
 <style  lang="less" >
     @import './../assets/css/public.css';
 
-    .flex-demo1{
+    .flexItem{
       height: 100px;
       background-color: #565645;
       text-align: center;
@@ -77,7 +76,6 @@
       // 在main.js里导入并使用vue-resource之后，就可以通过this.$http来使用vue-resource了，这里我们用到了get方法
       this.$http.get('http://localhost:9090/lvyou/index.php/Home/index/xinjson').then((success) => {
         // console.log(success.body);
-        // JSON.parse(success.body);
         // 请求成功，关闭loading
         this.tranform = false;
         // 由于请求成功返回的是Promise对象，我们要从success.body拿到数组

@@ -8,6 +8,7 @@
         <div class="drawerBg">
           <div class="drawerUserImg">
             <mu-avatar src="../../assets/logo.png" slot="leftAvatar" :size="60"/>
+            <img src="../../assets/logo.png">
           </div>
           <div class="drawerUsername">
             LeachZhou

@@ -1,9 +1,13 @@
 <template>
     <div class="swiper">
       <swiper class="swiperTop">
-        <swiper-slide class="lvSlide">Slide 1</swiper-slide>
-        <swiper-slide class="lvSlide">Slide 2</swiper-slide>
-        <swiper-slide class="lvSlide">Slide 3</swiper-slide>
+        <swiper-slide class="slide">
+          <div class="slideImg">
+            <img src="../../assets/logo.png" />
+          </div>
+        </swiper-slide>
+        <swiper-slide class="slide">Slide 2</swiper-slide>
+        <swiper-slide class="slide">Slide 3</swiper-slide>
       </swiper>
     </div>
 </template>
@@ -11,10 +15,14 @@
   .swiperTop{
     margin-top: 56px;
   }
-  .lvSlide{
+  .slide{
     width: 100%;
-    height:100px;
-    background: #00cfff;
+    height: 100px;
+    background: #dedede;
+  }
+  .slideImg img{
+    width:100%;
+    height: 100px;
   }
 </style>
 <script type="text/ecmascript-6">
