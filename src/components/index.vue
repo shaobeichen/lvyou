@@ -7,18 +7,18 @@
 
       <mu-flexbox :gutter="0">
         <mu-flexbox-item class="flexItem">
-          1
+          <img src="../assets/image/indexFour1.png" />
         </mu-flexbox-item>
         <mu-flexbox-item class="flexItem" gutter="0">
-          2
+          <img src="../assets/image/indexFour2.png" />
         </mu-flexbox-item>
       </mu-flexbox>
       <mu-flexbox :gutter="0">
         <mu-flexbox-item class="flexItem">
-          3
+          <img src="../assets/image/indexFour3.png" />
         </mu-flexbox-item>
         <mu-flexbox-item class="flexItem">
-          4
+          <img src="../assets/image/indexFour4.png" />
         </mu-flexbox-item>
       </mu-flexbox>
 
@@ -36,14 +36,19 @@
   </div>
 
 </template>
-<style  lang="less" >
+<style  lang="less" scoped>
     @import './../assets/css/public.css';
 
     .flexItem{
-      height: 100px;
+      width: 100%;
+      height: 75px;
       background-color: #565645;
       text-align: center;
       line-height: 100px;
+    }
+    .flexItem img{
+      width: 100%;
+      height: 100%;
     }
     .indexContent{
       background: #fff;
@@ -69,7 +74,7 @@
         tranform: false,
         menushow: true,
         headtitle: "发现",
-        publictitle: "标题一"
+        publictitle: "发现美好"
       }
     },
     created() {

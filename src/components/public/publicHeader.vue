@@ -7,27 +7,30 @@
       <mu-drawer :open="open" :docked="docked" @close="toggle()">
         <div class="drawerBg">
           <div class="drawerUserImg">
-            <mu-avatar src="../../assets/logo.png" slot="leftAvatar" :size="60"/>
-            <img src="../../assets/logo.png">
+            <!--<mu-avatar src="../../assets/logo.png" slot="leftAvatar" :size="60"/>-->
+            <div class="drawerUserRadius">
+              <img src="../../assets/logo.png">
+            </div>
+
           </div>
           <div class="drawerUsername">
             LeachZhou
           </div>
         </div>
         <mu-list>
-          <mu-list-item title="我的消息">
+          <mu-list-item title="我的文章">
             <mu-icon value="home" slot="left"/>
           </mu-list-item>
-          <mu-list-item title="我的消息">
-            <mu-icon value="home" slot="left"/>
-          </mu-list-item>
-          <mu-list-item title="我的消息">
-            <mu-icon value="home" slot="left"/>
-          </mu-list-item>
-          <mu-list-item title="我的消息">
+          <mu-list-item title="我的收藏">
             <mu-icon value="home" slot="left"/>
           </mu-list-item>
           <mu-list-item title="设置">
+            <mu-icon value="home" slot="left"/>
+          </mu-list-item>
+          <mu-list-item title="意见反馈">
+            <mu-icon value="home" slot="left"/>
+          </mu-list-item>
+          <mu-list-item title="咨询客服">
             <mu-icon value="home" slot="left"/>
           </mu-list-item>
           <mu-list-item title="退出登录">
@@ -55,6 +58,12 @@
     position: absolute;
     left: 10%;
     bottom: 25%;
+  }
+  .drawerUserRadius img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 2px solid #fff;
   }
   .drawerUsername{
     position: absolute;

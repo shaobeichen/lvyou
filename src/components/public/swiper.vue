@@ -3,15 +3,23 @@
       <swiper class="swiperTop">
         <swiper-slide class="slide">
           <div class="slideImg">
-            <img src="../../assets/logo.png" />
+            <img src="../../assets/image/banner1.png" />
           </div>
         </swiper-slide>
-        <swiper-slide class="slide">Slide 2</swiper-slide>
-        <swiper-slide class="slide">Slide 3</swiper-slide>
+        <swiper-slide class="slide">
+          <div class="slideImg">
+            <img src="../../assets/image/banner2.png" />
+          </div>
+        </swiper-slide>
+        <swiper-slide class="slide">
+          <div class="slideImg">
+            <img src="../../assets/image/banner3.png" />
+          </div>
+        </swiper-slide>
       </swiper>
     </div>
 </template>
-<style lang="less" >
+<style lang="less">
   .swiperTop{
     margin-top: 56px;
   }
