@@ -26,7 +26,7 @@
       return {
         menushow: true,
         headtitle: "话题",
-        topicBannerImg: "../assets/image/banner1.png",
+        topicBannerImg: "../../assets/image/banner1.png",
         topicBannerTitle: "那些让人羡慕的爱情",
         topicBannerDev: "那些让人羡慕的爱情,多么美丽，和大家说说吧那些让人羡慕的爱情,多么美丽，和大家说说吧！",
         publictitle: "热门动态",
