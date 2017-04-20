@@ -1,6 +1,6 @@
 <template>
     <div class="topicBanner">
-      <img :src="topicBannerImg" class="topicBannerImg">
+      <img src="http://p4.music.126.net/aEzLASFy9UnIkIpdMm4EtQ==/19023750183861398.jpg" class="topicBannerImg">
       <div class="topicBannerRelative">
         <div class="topicBannerDiv">
           <div class="borderTop"></div>
@@ -31,6 +31,7 @@
     width: 100%;
     height: 200px;
     background: #000000;
+    filter: blur(2px);
   }
   .borderTop{
     border-top: 2px solid #dedede;
@@ -73,6 +74,6 @@
 
         }
       },
-      props:['topicBannerImg','topicBannerTitle','topicBannerDev']
+      props:['topicBannerTitle','topicBannerDev']
     }
 </script>
