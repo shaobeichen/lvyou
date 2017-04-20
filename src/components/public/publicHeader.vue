@@ -8,9 +8,12 @@
         <div class="drawerBg">
           <div class="drawerUserImg">
             <!--<mu-avatar src="../../assets/logo.png" slot="leftAvatar" :size="60"/>-->
-            <div class="drawerUserRadius">
-              <img src="../../assets/logo.png">
-            </div>
+            <router-link to="/user/login">
+              <div class="drawerUserRadius" >
+                <img src="../../assets/logo.png">
+              </div>
+            </router-link>
+
 
           </div>
           <div class="drawerUsername">

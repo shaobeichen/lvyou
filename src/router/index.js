@@ -38,8 +38,17 @@ export default new Router({
       name: "user",
       component: (resolve) => {
         require(["../components/user.vue"], resolve);
-      }
-    },
+      },
+      children: [
+        {
+          path: "/login",
+          name: "login",
+          component: (resolve) => {
+            require(["../components/login.vue"], resolve);
+          }
+        }
+      ]
+    }
 
   ]
 })
