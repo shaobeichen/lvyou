@@ -36,13 +36,12 @@
       data() {
         return {
           bottomNav: 'index',
-          bottomNavColor: 'index'
         }
       },
       methods: {
         //底部切换
-        handleChange (val) {
-          this.bottomNav = val
+        handleChange (value) {
+          this.bottomNav = value
         }
       }
     }

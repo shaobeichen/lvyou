@@ -18,7 +18,11 @@
         <li><goodslist></goodslist></li>
         <li><goodslist></goodslist></li>
       </ul>
+
+      <publicfooter></publicfooter>
     </div>
+
+
 </template>
 <style lang="less">
   @import './../assets/css/public.css';
@@ -34,6 +38,7 @@
   }
 </style>
 <script type="text/ecmascript-6">
+  import publicfooter from "../components/public/publicFooter.vue"
   import publicheader from './public/publicHeader'
   import swiper from './public/swiper'
   import publictitle from './public/publicTitle'
@@ -51,7 +56,8 @@
         publicheader,
         swiper,
         publictitle,
-        goodslist
+        goodslist,
+        publicfooter
       }
     }
 </script>
