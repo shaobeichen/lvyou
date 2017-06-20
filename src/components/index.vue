@@ -3,6 +3,8 @@
     <spinner v-if='tranform'></spinner>
     <publicheader :menushow="menushow" :headtitle="headtitle" ></publicheader>
     <div v-if='!tranform'>
+
+
       <swiper></swiper>
 
       <mu-flexbox :gutter="0">

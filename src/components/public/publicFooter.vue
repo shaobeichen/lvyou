@@ -27,6 +27,7 @@
   .bottomFixed{
     position: fixed;
     width: 100%;
+    left: 0;
     bottom: 0;
     z-index:1000;
   }
@@ -36,6 +37,7 @@
       data() {
         return {
           bottomNav: 'index',
+          bottomNavColor: 'index'
         }
       },
       methods: {
