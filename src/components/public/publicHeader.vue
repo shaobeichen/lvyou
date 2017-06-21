@@ -8,7 +8,7 @@
         <div class="drawerBg">
           <div class="drawerUserImg">
             <!--<mu-avatar src="../../assets/logo.png" slot="leftAvatar" :size="60"/>-->
-            <router-link to="/user/login">
+            <router-link to="/login">
               <div class="drawerUserRadius" >
                 <img src="../../assets/logo.png">
               </div>
