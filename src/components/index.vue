@@ -3,8 +3,6 @@
     <spinner v-if='tranform'></spinner>
     <publicheader :menushow="menushow" :headtitle="headtitle" ></publicheader>
     <div v-if='!tranform'>
-
-
       <swiper></swiper>
 
       <mu-flexbox :gutter="0">
@@ -35,9 +33,6 @@
         </div>
       </div>
     </div>
-
-
-    <publicfooter></publicfooter>
   </div>
 </template>
 <style  lang="less" scoped>
@@ -66,7 +61,6 @@
 
 </style>
 <script type="text/ecmascript-6">
-  import publicfooter from "../components/public/publicFooter.vue"
   import spinner from './public/spinner'
   import swiper from './public/swiper'
   import publicheader from './public/publicHeader'
@@ -99,7 +93,6 @@
       swiper,
       publicheader,
       publictitle,
-      publicfooter
     }
   }
 </script>

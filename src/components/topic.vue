@@ -9,7 +9,6 @@
       <topiccard></topiccard>
       <addbutton></addbutton>
 
-      <publicfooter></publicfooter>
     </div>
 
 
@@ -18,7 +17,6 @@
   @import './../assets/css/public.css';
 </style>
 <script type="text/ecmascript-6">
-  import publicfooter from "../components/public/publicFooter.vue"
   import publicheader from './public/publicHeader'
   import topicbanner from './public/topicBanner.vue'
   import publictitle from './public/publicTitle'
@@ -41,7 +39,6 @@
       publictitle,
       topiccard,
       addbutton,
-      publicfooter
     }
   }
 </script>
