@@ -4,11 +4,10 @@
       <swiper></swiper>
       <mu-flexbox :gutter="0">
         <mu-flexbox-item class="flexItem">
-          <mu-flat-button label="干货分类" class="typeButton borderBottom1px" icon="dashboard" primary />
-          <div class="borderRight1px"></div>
+          <mu-flat-button label="干货分类" class="flatButton " icon="dashboard" primary />
         </mu-flexbox-item>
         <mu-flexbox-item class="flexItem" gutter="0">
-          <mu-flat-button label="干货排行" class="flatButton borderBottom1px" icon="list" primary />
+          <mu-flat-button label="干货排行" class="flatButton " icon="list" primary />
         </mu-flexbox-item>
       </mu-flexbox>
       <publictitle :publictitle="publictitle"></publictitle>
