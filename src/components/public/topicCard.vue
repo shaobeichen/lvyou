@@ -5,7 +5,7 @@
           <div class="topicCardAll">
           <div class="topicCardUser">
             <div class="topicCardUserImg">
-              <mu-avatar slot="left" src="/images/uicon.jpg" />
+              <mu-avatar slot="left" src="" />
             </div>
             <div class="topicCardUserRight">
               <p class="topicCardUserName">LeachZhou</p>
@@ -28,7 +28,7 @@
           <div class="topicCardAll">
           <div class="topicCardUser">
             <div class="topicCardUserImg">
-              <mu-avatar slot="left" src="/images/uicon.jpg" />
+              <mu-avatar slot="left" src="" />
             </div>
             <div class="topicCardUserRight">
               <p class="topicCardUserName">LeachZhou</p>

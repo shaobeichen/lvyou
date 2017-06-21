@@ -36,7 +36,6 @@
       data() {
         return {
           bottomNav: 'index',
-          bottomNavColor: 'index'
         }
       },
       methods: {

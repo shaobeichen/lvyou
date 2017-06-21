@@ -2,7 +2,7 @@
   <div class="app">
 
 
-    <publicfooter></publicfooter>
+    <publicfooter  v-show="$route.meta.navShow"></publicfooter>
     <router-view></router-view>
   </div>
 </template>
@@ -13,7 +13,9 @@
   import publicfooter from "./components/public/publicFooter.vue"
   export default{
     data() {
-      return {}
+      return {
+
+      }
     },
     components: {
       publicfooter

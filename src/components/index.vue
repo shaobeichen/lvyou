@@ -1,5 +1,5 @@
 <template>
-  <div class="index publiccss">
+  <div class="index publiccss"  >
     <spinner v-if='tranform'></spinner>
     <publicheader :menushow="menushow" :headtitle="headtitle" ></publicheader>
     <div v-if='!tranform'>
@@ -74,7 +74,7 @@
         tranform: false,
         menushow: true,
         headtitle: "发现",
-        publictitle: "发现美好"
+        publictitle: "发现美好",
       }
     },
     created() {
