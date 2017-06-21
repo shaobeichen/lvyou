@@ -8,12 +8,17 @@
       <publictitle :publictitle="publictitle"></publictitle>
       <topiccard></topiccard>
       <addbutton></addbutton>
+
+      <publicfooter></publicfooter>
     </div>
+
+
 </template>
 <style lang="less">
   @import './../assets/css/public.css';
 </style>
 <script type="text/ecmascript-6">
+  import publicfooter from "../components/public/publicFooter.vue"
   import publicheader from './public/publicHeader'
   import topicbanner from './public/topicBanner.vue'
   import publictitle from './public/publicTitle'
@@ -35,7 +40,8 @@
       topicbanner,
       publictitle,
       topiccard,
-      addbutton
+      addbutton,
+      publicfooter
     }
   }
 </script>

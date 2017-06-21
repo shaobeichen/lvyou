@@ -27,6 +27,7 @@
   .bottomFixed{
     position: fixed;
     width: 100%;
+    left: 0;
     bottom: 0;
     z-index:1000;
   }
@@ -41,8 +42,8 @@
       },
       methods: {
         //底部切换
-        handleChange (val) {
-          this.bottomNav = val
+        handleChange (value) {
+          this.bottomNav = value
         }
       }
     }
