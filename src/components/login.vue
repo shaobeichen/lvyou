@@ -5,10 +5,8 @@
       <mu-tab value="register" title="注册"/>
     </mu-tabs>
     <div v-if="activeTab === 'login'">
-      <h2>Tab One</h2>
-      <p>
-        这是第一个 tab
-      </p>
+      <mu-auto-complete hintText="请随便输入点啥" labelFloat label="full width" fullWidth @input="handleInput" :dataSource="dataSource"/>
+      <mu-auto-complete hintText="请随便输入点啥" labelFloat label="full width" fullWidth @input="handleInput" :dataSource="dataSource"/>
     </div>
     <div v-if="activeTab === 'register'">
       <h2>Tab Two</h2>

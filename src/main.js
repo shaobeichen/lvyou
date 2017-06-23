@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import vueResource from 'vue-resource'
+import VueResource from 'vue-resource'
+import store from './store/store'
 import App from './App'
 import router from './router/index'
 import MuseUI from 'muse-ui'
@@ -7,7 +8,7 @@ import 'muse-ui/dist/muse-ui.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(MuseUI)
 Vue.use(VueAwesomeSwiper)
-Vue.use(vueResource)
+Vue.use(VueResource)
 
 //FALSE为发展模式，TRUE为生产模式
 Vue.config.productionTip = false
@@ -16,6 +17,7 @@ Vue.http.options.emulateJSON = true
 
 new Vue({
   el: '#app',
+  store,
   router,
   ...App      //render: h => h(App)
 

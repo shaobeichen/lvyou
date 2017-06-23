@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import store from '../store/store'
 import Router from 'vue-router'
 
 Vue.use(Router)
@@ -58,3 +59,18 @@ export default new Router({
 
   ]
 })
+
+//
+// //每次进入新组件后的钩子函数
+// router.afterEach(function (to) {
+//     //判断是否登录
+//     if(store.state.isLogined){
+//       //判断登录状态是否存在
+//     }else {
+//       //不存在就跳转到登录页面
+//       router.push('/user/login')
+//     }
+//     //每次组件滚动条回到顶部
+//     //window.scrollTo(0,0)
+// });
+//
