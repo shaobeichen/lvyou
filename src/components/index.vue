@@ -3,6 +3,7 @@
     <spinner v-if='tranform'></spinner>
     <publicheader :menushow="menushow" :headtitle="headtitle" ></publicheader>
     <div v-if='!tranform'>
+
       <swiper></swiper>
 
       <mu-flexbox :gutter="0">
@@ -24,14 +25,15 @@
 
       <publictitle :publictitle="publictitle"></publictitle>
 
-      <div class="indexContent borderBottom1px" v-for="item in xin_body">
-        <div class="indexContentImg">
-          <img src="../assets/logo.png" >
+        <div class="indexContent borderBottom1px" v-for="item in xin_body">
+          <div class="indexContentImg">
+            <img src="../assets/logo.png" >
+          </div>
+          <div class="indexContentTitle">
+            <div>{{ item.article_id }}</div>
+          </div>
         </div>
-        <div class="indexContentTitle">
-          <div>{{ item.article_id }}</div>
-        </div>
-      </div>
+
     </div>
   </div>
 </template>
@@ -70,7 +72,7 @@
     data() {
       return {
         xin_body: [],
-        tranform: false,
+        tranform: true,
         menushow: true,
         headtitle: "发现",
         publictitle: "发现美好",

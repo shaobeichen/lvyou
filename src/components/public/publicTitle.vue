@@ -7,7 +7,7 @@
   .publicTitle{
     margin-top: 12px;
     background: #fff;
-    padding:10px;
+    padding: 10px 10px 10px 20px;
     font-size: 18px;
     border-left:5px solid #03A9F4;
     /*border-top: 1px solid #dbdbdb;*/

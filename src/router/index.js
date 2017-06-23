@@ -7,7 +7,7 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "index",
+      name: "home",
       component: (resolve) => {
         require(["../components/index.vue"], resolve);
       },
@@ -43,10 +43,10 @@ export default new Router({
       component: (resolve) => {
         require(["../components/user.vue"], resolve);
       },
-      meta: { navShow: true, cname: '一级页面' },
+      meta: { navShow: false, cname: '二级页面' },
       children: [
         {
-          path: "/login",
+          path: "/user/login",
           name: "login",
           component: (resolve) => {
             require(["../components/login.vue"], resolve);
