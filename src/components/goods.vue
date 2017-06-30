@@ -1,5 +1,5 @@
 <template>
-    <div class="goods publiccss">
+    <div class="goods indexMargin backAddFont">
       <publicheader :menushow="menushow" :headtitle="headtitle" ></publicheader>
       <swiper></swiper>
       <mu-flexbox :gutter="0">

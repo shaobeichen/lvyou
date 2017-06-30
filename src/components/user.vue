@@ -1,11 +1,9 @@
 <template>
-    <div class="user">
-      <mu-appbar>
-        <mu-icon-button icon="arrow_back" slot="left" @click="routerBack"/>
-      </mu-appbar>
+    <div class="backAddFont">
+      <backbar></backbar>
       <div class="userBg">
         <div class="userHead">
-          <img src="../assets/logo.png" />
+          <img src="../assets/image/defaultUser.png" />
           <div class="userName">
             LeachZhou
           </div>
@@ -36,9 +34,8 @@
     </div>
 </template>
 <style lang="less" scoped>
-  .user{
-    font-family: "Microsoft YaHei UI";
-  }
+  @import './../assets/css/public.css';
+
   .userBg{
     position: relative;
     width: 100%;
@@ -75,6 +72,7 @@
   }
 </style>
 <script type="text/ecmascript-6">
+  import backbar from './public/backBar.vue'
     export default{
       data () {
         return {
@@ -84,10 +82,10 @@
       methods: {
         handleTabChange (val) {
           this.activeTab = val
-        },
-        routerBack(){
-          this.$router.go(-1)
         }
+      },
+      components: {
+        backbar
       }
     }
 </script>

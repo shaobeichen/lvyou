@@ -1,36 +1,82 @@
 <template>
-  <div>
+  <div class="backAddFont">
+    <backbar></backbar>
     <mu-tabs :value="activeTab" @change="handleTabChange">
       <mu-tab value="login" title="登录"/>
       <mu-tab value="register" title="注册"/>
     </mu-tabs>
-    <div v-if="activeTab === 'login'">
-      <mu-auto-complete hintText="请随便输入点啥" labelFloat label="full width" fullWidth @input="handleInput" :dataSource="dataSource"/>
-      <mu-auto-complete hintText="请随便输入点啥" labelFloat label="full width" fullWidth @input="handleInput" :dataSource="dataSource"/>
+    <div v-if="activeTab === 'login'" class="loginMargin">
+      <mu-text-field v-model="inputLoginUsername" hintText="请输入用户名" type="text" fullWidth icon="person"/><br/>
+      <mu-text-field v-model="inputLoginPassWord" hintText="请输入密码" type="password" fullWidth icon="https"/><br/>
+      <mu-raised-button class="loginRadius" label="登录" @click.native="doLogin"  primary  fullWidth/>
     </div>
-    <div v-if="activeTab === 'register'">
-      <h2>Tab Two</h2>
-      <p>
-        这是第二个 tab
-      </p>
+    <div v-if="activeTab === 'register'" class="loginMargin">
+      <mu-text-field v-model="inputRegUsername" hintText="请输入用户名" type="text" fullWidth icon="person"/><br/>
+      <mu-text-field v-model="inputRegPassWord" hintText="请输入密码" type="password" fullWidth icon="https"/><br/>
+      <mu-raised-button class="loginRadius" label="注册" @click.native=""  primary fullWidth/>
     </div>
   </div>
+
 </template>
 <style lang="less" >
+  @import './../assets/css/public.css';
 
+  .loginMargin {
+    text-align: center;
+    margin: 30px;
+  }
+  .loginRadius {
+    border-radius: 20px;
+  }
 </style>
 <script type="text/ecmascript-6">
-    export default{
+  import backbar from './public/backBar.vue'
+  // 引入vuex /src/helper.js中的辅助函数，
+  // 将actions中的方法直接转为组件中的方法
+  import { mapActions } from 'vuex'
+  export default{
       data () {
         return {
-          activeTab: 'login'
+          //登录注册切换
+          activeTab: 'login',
+          //登录用户名密码和注册登录密码
+          inputLoginUsername: '',
+          inputLoginPassWord: '',
+          inputRegUsername: '',
+          inputRegPassWord: ''
         }
       },
+      components: {
+        backbar
+      },
       methods: {
+        //使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用
+        ...mapActions(['userLogin']),
+        //登录注册切换
         handleTabChange (val) {
           this.activeTab = val
+        },
+        //登录操作
+        doLogin(){
+          let options = {
+            username : this.inputLoginUsername,
+            password : this.inputLoginPassWord
+          }
+          // 在main.js里导入并使用vue-resource之后，就可以通过this.$http来使用vue-resource了，这里我们用到了get方法
+          this.$http.post('https://api.leancloud.cn/1.1/login',options).then((success) => {
+            // console.log(success.body);
+            //分发actions组件中调用
+            this.userLogin(success.body);
+            //提示登录成功
+
+            //跳转页面
+
+          }, (error) => {
+            //提示登录失败
+
+          })
         }
       }
 
-    }
+  }
 </script>

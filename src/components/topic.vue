@@ -1,5 +1,5 @@
 <template>
-    <div class="topic publiccss">
+    <div class="topic indexMargin backAddFont">
       <publicheader :menushow="menushow" :headtitle="headtitle"></publicheader>
       <topicbanner class="swiperTop"
                    :topicBannerTitle="topicBannerTitle"

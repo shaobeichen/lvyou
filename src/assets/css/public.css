@@ -1,9 +1,12 @@
-.publiccss{
-  background: #ffffff;
-  font-family: "Microsoft YaHei UI";
+.indexMargin {
   margin-bottom: 56px;
   margin-top: 56px;
 }
+.backAddFont {
+  background: #ffffff;
+  font-family: "Microsoft YaHei UI";
+}
+
 .borderBottom1px {
   width: 100%;
   height: 100%;

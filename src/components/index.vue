@@ -1,5 +1,5 @@
 <template>
-  <div class="index publiccss"  >
+  <div class="index indexMargin backAddFont"  >
     <spinner v-if='tranform'></spinner>
     <publicheader :menushow="menushow" :headtitle="headtitle" ></publicheader>
     <div v-if='!tranform'>
@@ -27,7 +27,7 @@
 
         <div class="indexContent borderBottom1px" v-for="item in xin_body">
           <div class="indexContentImg">
-            <img src="../assets/logo.png" >
+            <img src="../assets/image/logo.png" >
           </div>
           <div class="indexContentTitle">
             <div>{{ item.article_id }}</div>
@@ -80,7 +80,7 @@
     },
     created() {
       // 在main.js里导入并使用vue-resource之后，就可以通过this.$http来使用vue-resource了，这里我们用到了get方法
-      this.$http.get('http://localhost:9090/lvyou/index.php/Home/index/xinjson').then((success) => {
+      this.$http.get('https://api.leancloud.cn/1.1/roles/55a483f0e4b05001a774b837').then((success) => {
         // console.log(success.body);
         // 请求成功，关闭loading
         this.tranform = false;

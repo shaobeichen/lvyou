@@ -29,11 +29,12 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       // '/api': {
-      //   // target: 'https://api.douban.com/v2/',
+      //   target: 'https://api.leancloud.cn:443/1.1/',
       //   // target: 'http://localhost:9090/xinqiji/index.php/Home/index/xinjson',
       //   changeOrigin: true,
+      //   // 如果不用pathRewrite，目标地址后面不能跟接口名字
       //   pathRewrite: {
-      //     '^/api': '/api'
+      //     '^/api': '/'
       //   }
       // }
     },

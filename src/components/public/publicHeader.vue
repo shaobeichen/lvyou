@@ -7,10 +7,9 @@
       <mu-drawer :open="open" :docked="docked" @close="toggle()">
         <div class="drawerBg">
           <div class="drawerUserImg">
-            <!--<mu-avatar src="../../assets/logo.png" slot="leftAvatar" :size="60"/>-->
             <router-link to="/user">
               <div class="drawerUserRadius" >
-                <img src="../../assets/logo.png">
+                <img src="../../assets/image/defaultUser.png">
               </div>
             </router-link>
 
