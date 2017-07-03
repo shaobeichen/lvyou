@@ -28,6 +28,18 @@ Vue.use(Vuex)
       meta: {
         navShow: true,
         cname: '一级页面',
+      },
+      // children:[{
+      //   path: '/index/:id',
+      //   component: (resolve) => {
+      //     require(["../components/index.vue"], resolve);
+      //   }
+      // }]
+    },
+    {
+      path: '/detailPage/:id',
+      component: (resolve) => {
+        require(["../components/detailPage.vue"], resolve);
       }
     },
     {

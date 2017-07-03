@@ -25,14 +25,14 @@
 
       <publictitle :publictitle="publictitle"></publictitle>
 
-        <div class="indexContent borderBottom1px" v-for="item in xin_body">
-          <div class="indexContentImg">
-            <img src="../assets/image/logo.png" >
-          </div>
-          <div class="indexContentTitle">
-            <div>{{ item.article_id }}</div>
-          </div>
-        </div>
+      <div class="indexContent borderBottom1px" v-for="item in exploreBody">
+        <mu-card  @click="goDetail">
+          <mu-card-media>
+            <img :src="item.CoverMap.url" />
+          </mu-card-media>
+          <mu-card-title :title="item.title" :subTitle="ymd > item.updatedAt.substring(0,10) ? item.updatedAt.substring(0,10):item.updatedAt.substring(16,11)"/>
+        </mu-card>
+      </div>
 
     </div>
   </div>
@@ -52,14 +52,10 @@
       height: 100%;
     }
     .indexContent{
+      margin: 20px 0;
       background: #fff;
     }
-    .indexContentImg{
-      text-align:center;
-    }
-    .indexContentTitle{
-      padding: 0 50px;
-    }
+
 
 </style>
 <script type="text/ecmascript-6">
@@ -71,21 +67,48 @@
   export default{
     data() {
       return {
-        xin_body: [],
-        tranform: true,
+        exploreBody: [],
+        tranform: this.$store.state.tranform,
         menushow: true,
         headtitle: "发现",
         publictitle: "发现美好",
+        ymd: '',
+
+      }
+    },
+    methods:{
+      //时间格式处理
+      newDate(){
+        let myDate = new Date();
+        let year = 1900+myDate.getYear();
+        let month = myDate.getMonth()+1;
+        if(month<10){
+          month = "0" + month
+        }
+        let day = myDate.getDay()+2;
+        if(day<10){
+          day = "0" + day
+        }
+        this.ymd = year+"-"+month+"-"+day;
+        // console.log(this.ymd);
+      },
+      //根据id进入详情页
+      goDetail(){
+        this.$router.push({
+          path: 'detailPage',
+          query:{ pageId:this.detailPage.id }
+        })
       }
     },
     created() {
       // 在main.js里导入并使用vue-resource之后，就可以通过this.$http来使用vue-resource了，这里我们用到了get方法
-      this.$http.get('https://api.leancloud.cn/1.1/roles/55a483f0e4b05001a774b837').then((success) => {
-        // console.log(success.body);
+        this.$http.get('https://api.leancloud.cn/1.1/classes/explore').then((success) => {
         // 请求成功，关闭loading
         this.tranform = false;
         // 由于请求成功返回的是Promise对象，我们要从success.body拿到数组
-        this.xin_body = success.body;
+        this.exploreBody = success.body.results;
+        this.newDate();
+
       }, (error) => {
         console.log(error)
       })

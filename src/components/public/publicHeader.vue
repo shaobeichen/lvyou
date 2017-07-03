@@ -12,11 +12,9 @@
                 <img src="../../assets/image/defaultUser.png">
               </div>
             </router-link>
-
-
           </div>
           <div class="drawerUsername">
-            登录 | 注册
+              {{this.$store.state.drawerUsername}}
           </div>
         </div>
         <mu-list>
@@ -78,8 +76,11 @@
     export default{
       data () {
         return {
+          //控制侧滑栏开关
           open: false,
-          docked: true
+          docked: true,
+          //登录前登录，登录后用户名
+          // drawerUsername:'登录 | 注册'
         }
       },
       methods: {

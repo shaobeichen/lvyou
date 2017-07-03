@@ -5,7 +5,7 @@
         <div class="userHead">
           <img src="../assets/image/defaultUser.png" />
           <div class="userName">
-            LeachZhou
+            {{this.$store.state.drawerUsername}}
           </div>
           <mu-flat-button icon="mode_edit" label="修改资料" class="demo-raised-button detailUserInfo" backgroundColor="rgba(0,0,0,0.2)"/>
         </div>

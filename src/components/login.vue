@@ -32,7 +32,7 @@
 </style>
 <script type="text/ecmascript-6">
   import backbar from './public/backBar.vue'
-  // 引入vuex /src/helper.js中的辅助函数，
+  // 引入vuex中的辅助函数，
   // 将actions中的方法直接转为组件中的方法
   import { mapActions } from 'vuex'
   export default{
@@ -54,6 +54,9 @@
         backbar
       },
       methods: {
+        //使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用
+        ...mapActions(['setLogined']),
+        ...mapActions(['loginUsername']),
         //提示框
         showSnackbar () {
           this.snackbar = true;
@@ -64,8 +67,6 @@
         handleTabChange (val) {
           this.activeTab = val
         },
-        //使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用
-        ...mapActions(['userLogin']),
         //登录操作
         doLogin(){
           let options = {
@@ -76,7 +77,8 @@
           this.$http.post('https://api.leancloud.cn/1.1/login',options).then((success) => {
             // console.log(success.body);
             //分发actions组件中调用
-            this.userLogin(success.body);
+            this.setLogined(success.body);
+            this.loginUsername(success.body.username);
             //提示登录成功
             this.showSnackbar();
             //利用在路由钩子里的地址跳转页面
@@ -84,6 +86,7 @@
             this.$router.push({ //你需要接受路由的参数再跳转
               path: redirect
             });
+
           }, (error) => {
             //提示登录失败
             if(error.code = 400){
