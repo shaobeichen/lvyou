@@ -17,7 +17,11 @@
     },
     methods: {
       routerBack(){
-        this.$router.go(-1)
+        if(this.$store.state.isLogined){
+          this.$router.go(-1)
+        }else{
+          this.$router.go(-1)
+        }
       }
     }
   }

@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export const SETLOGINED = 'SETLOGINED';
+export const SET_LOGINED = 'SET_LOGINED';
 
 // 对于vuex的用法，其实理解了流程就行
 // vuex -> actions -> 提交（commit）mutations ->state -> view -> dispatch 触发 actions ->...
@@ -19,9 +19,9 @@ const state = {
   sise_cookie : '',
 }
 
-const mutation = {
+const mutations = {
   // 改变登录状态为真
-  [SETLOGINED](state,payload){
+  [SET_LOGINED](state,payload){
     state.isLogined = payload.status;
   },
   //更改用户名和密码
@@ -47,7 +47,11 @@ const mutation = {
 // 这里的data是因为提交mutations时需要获取从/api/login传回的user对象
 const actions = {
   userLogin({ commit }, data) {
-    commit( SETLOGINED, data );
+    commit(
+      SET_LOGINED,
+      {
+        status:true
+      });
   },
 
 }
@@ -56,6 +60,6 @@ const actions = {
 
 export default new Vuex.Store({
   state,
-  mutation,
+  mutations,
   actions
 })

@@ -16,7 +16,7 @@
 
           </div>
           <div class="drawerUsername">
-            LeachZhou
+            登录 | 注册
           </div>
         </div>
         <mu-list>
