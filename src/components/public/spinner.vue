@@ -9,11 +9,12 @@
 </template>
 <style lang="less" >
   .spinner {
-    margin: 100px auto;
+    margin: 300px auto;
     width: 50px;
     height: 60px;
     text-align: center;
     font-size: 10px;
+    z-index: 1000;
   }
 
   .spinner > div {

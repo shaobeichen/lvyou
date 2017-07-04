@@ -31,7 +31,7 @@
             <mu-card-media>
               <img :src="item.CoverMap.url" />
             </mu-card-media>
-            <mu-card-title :title="item.title" :subTitle="ymd > item.createdAt.substring(0,10) ? item.createdAt.substring(0,10):item.createdAt.substr(11,5)"/>
+            <mu-card-title :title="item.title" :subTitle=" ymd > item.createdAt.substring(0,10) ? item.createdAt.substring(0,10):item.createdAt.substr(11,5)"/>
           </mu-card>
         </router-link>
       </div>

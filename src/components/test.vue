@@ -22,7 +22,8 @@
     },
     created() {
       let options = {
-        cql: "select * from explore where objectId='595a473bac502e7589c3cb53'"
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        params: { 'cql': "select * from explore where objectId='595a473bac502e7589c3cb53'"}
       }
       this.$http.get('https://api.leancloud.cn/1.1/cloudQuery',options).then((success) => {
 

@@ -35,7 +35,7 @@
             <mu-icon value="home" slot="left"/>
           </mu-list-item>
           <mu-list-item title="退出登录" v-if="this.$store.state.sessionToken" @click="logoutDialogOpen">
-            <mu-icon value="home" slot="left" />
+            <mu-icon value="system_update_alt" slot="left" />
           </mu-list-item>
           <mu-dialog :open="dialog" @close="logoutDialogClose">
             确定退出当前账号吗？
