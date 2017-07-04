@@ -2,6 +2,9 @@
   margin-bottom: 56px;
   margin-top: 56px;
 }
+.detailMargin {
+  margin-top: 56px;
+}
 .backAddFont {
   background: #ffffff;
   font-family: "Microsoft YaHei UI";

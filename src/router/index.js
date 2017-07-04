@@ -38,6 +38,7 @@ Vue.use(Vuex)
     },
     {
       path: '/detailPage/:id',
+      name: 'detailPage',
       component: (resolve) => {
         require(["../components/detailPage.vue"], resolve);
       }

@@ -26,12 +26,15 @@
       <publictitle :publictitle="publictitle"></publictitle>
 
       <div class="indexContent borderBottom1px" v-for="item in exploreBody">
-        <mu-card  @click="goDetail">
-          <mu-card-media>
-            <img :src="item.CoverMap.url" />
-          </mu-card-media>
-          <mu-card-title :title="item.title" :subTitle="ymd > item.updatedAt.substring(0,10) ? item.updatedAt.substring(0,10):item.updatedAt.substring(16,11)"/>
-        </mu-card>
+        <router-link :to="{ name:'detailPage',params:{ id:item.objectId } }">
+          <mu-card>
+            <mu-card-media>
+              <img :src="item.CoverMap.url" />
+            </mu-card-media>
+            <mu-card-title :title="item.title" :subTitle="ymd > item.createdAt.substring(0,10) ? item.createdAt.substring(0,10):item.createdAt.substr(11,5)"/>
+          </mu-card>
+        </router-link>
+
       </div>
 
     </div>
@@ -91,13 +94,6 @@
         }
         this.ymd = year+"-"+month+"-"+day;
         // console.log(this.ymd);
-      },
-      //根据id进入详情页
-      goDetail(){
-        this.$router.push({
-          path: 'detailPage',
-          query:{ pageId:this.detailPage.id }
-        })
       }
     },
     created() {
