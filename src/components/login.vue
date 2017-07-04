@@ -1,21 +1,25 @@
 <template>
   <div class=" detailMargin backAddFont">
     <backbar></backbar>
-    <mu-tabs :value="activeTab" @change="handleTabChange">
-      <mu-tab value="login" title="登录"/>
-      <mu-tab value="register" title="注册"/>
-    </mu-tabs>
-    <div v-if="activeTab === 'login'" class="loginMargin">
-      <mu-text-field v-model="inputLoginUsername" hintText="请输入用户名" type="text" fullWidth icon="person"/><br/>
-      <mu-text-field v-model="inputLoginPassWord" hintText="请输入密码" type="password" fullWidth icon="https"/><br/>
-      <mu-raised-button class="loginRadius" label="登录" @click.native="doLogin"  primary  fullWidth/>
-      <mu-snackbar v-if="snackbar" :message="message" />
+    <spinner v-if='tranform'></spinner>
+    <div v-if='!tranform'>
+      <mu-tabs :value="activeTab" @change="handleTabChange">
+        <mu-tab value="login" title="登录"/>
+        <mu-tab value="register" title="注册"/>
+      </mu-tabs>
+      <div v-if="activeTab === 'login'" class="loginMargin">
+        <mu-text-field v-model="inputLoginUsername" hintText="请输入用户名" type="text" fullWidth icon="person"/><br/>
+        <mu-text-field v-model="inputLoginPassWord" hintText="请输入密码" type="password" fullWidth icon="https"/><br/>
+        <mu-raised-button class="loginRadius" label="登录" @click.native="doLogin"  primary  fullWidth/>
+        <mu-snackbar v-if="snackbar" :message="message" />
+      </div>
+      <div v-if="activeTab === 'register'" class="loginMargin">
+        <mu-text-field v-model="inputRegUsername" hintText="请输入用户名" type="text" fullWidth icon="person"/><br/>
+        <mu-text-field v-model="inputRegPassWord" hintText="请输入密码" type="password" fullWidth icon="https"/><br/>
+        <mu-raised-button class="loginRadius" label="注册" @click.native=""  primary fullWidth/>
+      </div>
     </div>
-    <div v-if="activeTab === 'register'" class="loginMargin">
-      <mu-text-field v-model="inputRegUsername" hintText="请输入用户名" type="text" fullWidth icon="person"/><br/>
-      <mu-text-field v-model="inputRegPassWord" hintText="请输入密码" type="password" fullWidth icon="https"/><br/>
-      <mu-raised-button class="loginRadius" label="注册" @click.native=""  primary fullWidth/>
-    </div>
+
   </div>
 
 </template>
@@ -32,12 +36,15 @@
 </style>
 <script type="text/ecmascript-6">
   import backbar from './public/backBar.vue'
+  import spinner from './public/spinner.vue'
   // 引入vuex中的辅助函数，
   // 将actions中的方法直接转为组件中的方法
   import { mapActions } from 'vuex'
   export default{
       data () {
         return {
+          //loading动画
+          tranform: this.$store.state.tranform,
           //登录注册切换
           activeTab: 'login',
           //登录用户名密码和注册登录密码
@@ -51,7 +58,16 @@
         }
       },
       components: {
-        backbar
+        backbar,
+        spinner
+      },
+      created(){
+         //判断网络状态
+          this.$http.get('https://api.leancloud.cn/1.1/classes/explore').then((success) => {
+          this.tranform = false;
+        }, (error) => {
+          console.log(error)
+        })
       },
       methods: {
         //使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用

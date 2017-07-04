@@ -88,6 +88,13 @@ Vue.use(Vuex)
         cname: '二级页面',
       }
     },
+    {
+      path: "/test",
+      name: "test",
+      component: (resolve) => {
+        require(["../components/test.vue"], resolve);
+      }
+    }
 
   ]
 })
