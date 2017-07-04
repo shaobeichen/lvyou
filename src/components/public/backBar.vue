@@ -29,9 +29,9 @@
       routerBack(){
         if(this.$store.state.sessionToken){
           if(this.$store.state.isFirst){
-            this.$router.go(-1);
-            this.$router.go(-1);
             this.setIsFirst(false);
+            this.$router.go(-1);
+            this.$router.go(-1);
           }else{
             this.$router.go(-1)
           }

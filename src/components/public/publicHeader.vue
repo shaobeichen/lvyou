@@ -34,9 +34,14 @@
           <mu-list-item title="咨询客服">
             <mu-icon value="home" slot="left"/>
           </mu-list-item>
-          <mu-list-item title="退出登录">
-            <mu-icon value="home" slot="left"/>
+          <mu-list-item title="退出登录" v-if="this.$store.state.sessionToken" @click="logoutDialogOpen">
+            <mu-icon value="home" slot="left" />
           </mu-list-item>
+          <mu-dialog :open="dialog" @close="logoutDialogClose">
+            确定退出当前账号吗？
+            <mu-flat-button slot="actions" @click="logoutDialogClose" primary label="取消"/>
+            <mu-flat-button slot="actions" primary @click="logout" label="退出"/>
+          </mu-dialog>
         </mu-list>
       </mu-drawer>
     </div>
@@ -74,20 +79,47 @@
   }
 </style>
 <script type="text/ecmascript-6">
-    export default{
+  import {mapActions} from 'vuex'
+
+  export default{
       data () {
         return {
           //控制侧滑栏开关
           open: false,
+          //侧滑栏显示遮盖层
           docked: true,
+          //dialog开关
+          dialog: false
         }
       },
       methods: {
+        ...mapActions(['logOut']),
+        //控制侧滑栏
         toggle (flag) {
           this.open = !this.open;
           this.docked = !flag;
+        },
+        logoutDialogOpen(){
+          this.dialog = true
+        },
+        logoutDialogClose(){
+          this.dialog = false
+        },
+        //注销
+        logout(){
+          let data = {
+            sessionToken: false,
+            drawerUsername: '登录 | 注册',
+            headImg: ''
+          }
+          this.logOut(data);
+          this.dialog = false;
+          this.open = false;
+          this.docked = true;
+          window.location.reload();
         }
       },
+
       props:[ 'menushow', 'headtitle' ]
     }
 </script>

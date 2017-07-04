@@ -37,8 +37,6 @@
 <script type="text/ecmascript-6">
   import backbar from './public/backBar.vue'
   import spinner from './public/spinner.vue'
-  // 引入vuex中的辅助函数，
-  // 将actions中的方法直接转为组件中的方法
   import {mapActions} from 'vuex'
   export default{
     data () {

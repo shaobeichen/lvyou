@@ -7,6 +7,7 @@ export const DRAWER_USERNAME = 'DRAWER_USERNAME';
 export const HEAD_IMG = 'HEAD_IMG';
 export const SESSION_TOKEN = 'SESSION_TOKEN';
 export const IS_FIRST = 'IS_FIRST';
+export const LOG_OUT = 'LOG_OUT';
 
 // 对于vuex的用法，其实理解了流程就行
 // vuex -> actions -> 提交（commit）mutations ->state -> view -> dispatch 触发 actions ->...
@@ -37,6 +38,12 @@ const mutations = {
   [SESSION_TOKEN](state,payload){
     state.sessionToken = payload.sessionToken;
   },
+  //注销
+  [LOG_OUT](state,payload){
+    state.sessionToken = payload.sessionToken;
+    state.drawerUsername = payload.drawerUsername;
+    state.headImg = payload.headImg;
+  },
   //设置第一次返回按钮
   [IS_FIRST](state,payload){
     state.isFirst = payload.isFirst;
@@ -53,6 +60,7 @@ const mutations = {
 // 在.vue文件中通过store.dispatch('userLogin') 即可触发状态改变了
 // 这里的data是因为提交mutations时需要获取从/api/login传回的user对象
 const actions = {
+  //侧滑栏已登录用户名
   loginUsername({ commit }, data) {
     commit(
       DRAWER_USERNAME,
@@ -60,6 +68,7 @@ const actions = {
         drawerUsername:data
       });
   },
+  //侧滑栏已登录已登录头像
   setHeadImg({ commit }, data) {
     commit(
       HEAD_IMG,
@@ -67,6 +76,7 @@ const actions = {
         headImg:data
       });
   },
+  //token判断是否登录
   sessionToken({ commit }, data) {
     commit(
       SESSION_TOKEN,
@@ -74,6 +84,17 @@ const actions = {
         sessionToken:data
       });
   },
+  //注销
+  logOut({ commit }, data) {
+    commit(
+      LOG_OUT,
+      {
+        sessionToken: data.sessionToken,
+        drawerUsername: data.drawerUsername,
+        headImg: data.headImg
+      });
+  },
+  //判断是否第一次返回按钮
   setIsFirst({ commit }, data) {
     commit(
       IS_FIRST,

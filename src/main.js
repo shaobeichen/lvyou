@@ -22,6 +22,7 @@ Vue.http.options.emulateHTTP = true;
 Vue.http.interceptors.push(function(request, next) {
   request.headers.set('X-LC-Id', 'GDylhkFzcK2qQ76viJMH88Tk-gzGzoHsz');
   request.headers.set('X-LC-Key', '0H797TpfJsn2wNJXnC7Sdr8G');
+  request.headers.set('X-LC-Session', 'qmdj8pdidnmyzp0c7yqil91oc');
   next();
 });
 
