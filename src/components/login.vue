@@ -1,5 +1,5 @@
 <template>
-  <div class="backAddFont">
+  <div class=" detailMargin backAddFont">
     <backbar></backbar>
     <mu-tabs :value="activeTab" @change="handleTabChange">
       <mu-tab value="login" title="登录"/>
@@ -55,8 +55,8 @@
       },
       methods: {
         //使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用
-        ...mapActions(['setLogined']),
         ...mapActions(['loginUsername']),
+        ...mapActions(['sessionToken']),
         //提示框
         showSnackbar () {
           this.snackbar = true;
@@ -77,8 +77,8 @@
           this.$http.post('https://api.leancloud.cn/1.1/login',options).then((success) => {
             // console.log(success.body);
             //分发actions组件中调用
-            this.setLogined(success.body);
             this.loginUsername(success.body.username);
+            this.sessionToken(success.body.sessionToken);
             //提示登录成功
             this.showSnackbar();
             //利用在路由钩子里的地址跳转页面

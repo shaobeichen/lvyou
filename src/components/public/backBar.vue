@@ -17,6 +17,7 @@
 
 </style>
 <script type="text/ecmascript-6">
+  import { mapActions } from 'vuex'
   export default{
     data () {
       return {
@@ -24,9 +25,16 @@
       }
     },
     methods: {
+      ...mapActions(['setIsFirst']),
       routerBack(){
-        if(this.$store.state.isLogined){
-          this.$router.go(-1)
+        if(this.$store.state.sessionToken){
+          if(this.$store.state.isFirst){
+            this.$router.go(-1);
+            this.$router.go(-1);
+            this.setIsFirst(false);
+          }else{
+            this.$router.go(-1)
+          }
         }else{
           this.$router.go(-1)
         }

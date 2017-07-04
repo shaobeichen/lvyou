@@ -3,8 +3,9 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export const SET_LOGINED = 'SET_LOGINED';
 export const DRAWER_USERNAME = 'DRAWER_USERNAME';
+export const SESSION_TOKEN = 'SESSION_TOKEN';
+export const IS_FIRST = 'IS_FIRST';
 
 // 对于vuex的用法，其实理解了流程就行
 // vuex -> actions -> 提交（commit）mutations ->state -> view -> dispatch 触发 actions ->...
@@ -13,37 +14,28 @@ export const DRAWER_USERNAME = 'DRAWER_USERNAME';
 const state = {
   //loading动画
   tranform: true,
-  //是否登录状态
-  isLogined : false,
-  // 用户名和密码
-  userName: '',
-  passWord: '',
-  //模拟登录的cookie
-  sise_cookie : '',
+  //登录token
+  sessionToken : '',
   //侧滑栏用户名
-  drawerUsername:'登录 | 注册'
+  drawerUsername:'登录 | 注册',
+  //返回按钮是否是第一次按
+  isFirst: true
 }
 
 const mutations = {
-  // 改变登录状态为真
-  [SET_LOGINED](state,payload){
-    state.isLogined = payload.status;
-  },
-
+  //设置用户名
   [DRAWER_USERNAME](state,payload){
     state.drawerUsername = payload.drawerUsername;
   },
-  //更改用户名和密码
-  setUserFn(state,payload){
-    state.userName = payload.user;
+  //设置登录token
+  [SESSION_TOKEN](state,payload){
+    state.sessionToken = payload.sessionToken;
   },
-  setPassFn(state,payload){
-    state.passWord = payload.pass;
+  //设置第一次返回按钮
+  [IS_FIRST](state,payload){
+    state.isFirst = payload.isFirst;
   },
-  //更改模拟登录的cookie
-  setSiseCookieFn(state,payload){
-    state.sise_cookie = payload.sise_cookie;
-  },
+
 }
 
 // actions中的函数接受一个与store实例有相同属性和方法的context对像
@@ -55,18 +47,25 @@ const mutations = {
 // 在.vue文件中通过store.dispatch('userLogin') 即可触发状态改变了
 // 这里的data是因为提交mutations时需要获取从/api/login传回的user对象
 const actions = {
-  setLogined({ commit }, data) {
-    commit(
-      SET_LOGINED,
-      {
-        status:true
-      });
-  },
   loginUsername({ commit }, data) {
     commit(
       DRAWER_USERNAME,
       {
         drawerUsername:data
+      });
+  },
+  sessionToken({ commit }, data) {
+    commit(
+      SESSION_TOKEN,
+      {
+        sessionToken:data
+      });
+  },
+  setIsFirst({ commit }, data) {
+    commit(
+      IS_FIRST,
+      {
+        isFirst:data
       });
   },
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="backAddFont">
+    <div class="detailMargin backAddFont">
       <backbar></backbar>
       <div class="userBg">
         <div class="userHead">
