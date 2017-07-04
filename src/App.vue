@@ -1,6 +1,5 @@
 <template>
   <div class="app">
-
       <router-view></router-view>
     <publicfooter  v-show="$route.meta.navShow"></publicfooter>
 

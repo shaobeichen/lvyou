@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export const DRAWER_USERNAME = 'DRAWER_USERNAME';
+export const HEAD_IMG = 'HEAD_IMG';
 export const SESSION_TOKEN = 'SESSION_TOKEN';
 export const IS_FIRST = 'IS_FIRST';
 
@@ -16,16 +17,21 @@ const state = {
   tranform: true,
   //登录token
   sessionToken : '',
-  //侧滑栏用户名
+  //侧滑栏用户名头像
   drawerUsername:'登录 | 注册',
+  headImg:'',
   //返回按钮是否是第一次按
   isFirst: true
 }
 
 const mutations = {
-  //设置用户名
+  //设置侧滑栏用户名
   [DRAWER_USERNAME](state,payload){
     state.drawerUsername = payload.drawerUsername;
+  },
+  //设置侧滑栏头像
+  [HEAD_IMG](state,payload){
+    state.headImg = payload.headImg;
   },
   //设置登录token
   [SESSION_TOKEN](state,payload){
@@ -52,6 +58,13 @@ const actions = {
       DRAWER_USERNAME,
       {
         drawerUsername:data
+      });
+  },
+  setHeadImg({ commit }, data) {
+    commit(
+      HEAD_IMG,
+      {
+        headImg:data
       });
   },
   sessionToken({ commit }, data) {

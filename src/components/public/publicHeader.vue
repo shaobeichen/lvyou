@@ -9,7 +9,8 @@
           <div class="drawerUserImg">
             <router-link to="/user">
               <div class="drawerUserRadius" >
-                <img src="../../assets/image/defaultUser.png">
+                <img src="../../assets/image/defaultUser.png" v-if="!this.$store.state.sessionToken">
+                <img :src="this.$store.state.headImg" v-if="this.$store.state.sessionToken">
               </div>
             </router-link>
           </div>
@@ -79,8 +80,6 @@
           //控制侧滑栏开关
           open: false,
           docked: true,
-          //登录前登录，登录后用户名
-          // drawerUsername:'登录 | 注册'
         }
       },
       methods: {

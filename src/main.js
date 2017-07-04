@@ -7,6 +7,7 @@ import router from './router/index'
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+
 Vue.use(MuseUI)
 Vue.use(VueAwesomeSwiper)
 Vue.use(VueResource)
