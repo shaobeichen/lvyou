@@ -19,7 +19,7 @@
       </swiper>
     </div>
 </template>
-<style lang="less">
+<style lang="less" scoped>
   .swiperTop{
     margin-top: 56px;
   }

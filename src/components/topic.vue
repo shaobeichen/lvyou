@@ -7,7 +7,16 @@
         <topicbanner class="swiperTop"
                      :topicBannerTitle="topicBannerTitle"
                      :topicBannerDev="topicBannerDev"></topicbanner>
-        <publictitle :publictitle="publictitle"></publictitle>
+        <publictitle :publictitle="publictitleOne"></publictitle>
+
+        <swiper :options="swiperOption" class="topicMoreSwiper">
+          <swiper-slide class="topicMoreSlide" v-for="item in topicMoreBody">
+            <img :src="item.coverImg.url" class="topicMoreImg" />
+            <p>#{{ item.topicMoreTitle }}#</p>
+          </swiper-slide>
+        </swiper>
+
+        <publictitle :publictitle="publictitleTwo"></publictitle>
         <ul>
           <li class="borderBottom1px" v-for="item in topicContentBody">
             <div class="topicCardAll">
@@ -22,9 +31,7 @@
               </div>
 
               <div class="topicCardContent">
-                <p>
-                  {{ item.topicContent }}
-                </p>
+                <p>{{ item.topicContent }}</p>
               </div>
             </div>
           </li>
@@ -59,6 +66,22 @@
     clear: both;
     margin-left: 60px;
   }
+  .topicMoreSwiper{
+    padding: 10px 10px 0 10px;
+    /*margin: 10px 0 0 0;*/
+  }
+  .topicMoreSlide{
+    height: 115px;
+  }
+  .topicMoreSlide p{
+     color: #818181;
+  }
+  .topicMoreImg{
+    width: 100%;
+    height: 70px;
+    border-radius:15px;
+  }
+
 </style>
 <script type="text/ecmascript-6">
   import publicheader from './public/publicHeader'
@@ -74,13 +97,19 @@
         headtitle: "话题",
         topicBannerTitle: "那些让人羡慕的爱情",
         topicBannerDev: "那些让人羡慕的爱情,多么美丽，和大家说说吧那些让人羡慕的爱情,多么美丽，和大家说说吧！",
-        publictitle: "热门动态",
+        publictitleOne: "热门话题",
+        publictitleTwo: "热门动态",
         topicContentBody: [],
-        // topicUserBody: [],
+        topicMoreBody: [],
         tranform: this.$store.state.tranform,
         ymd: '',
-        one: true,
-        two: true,
+        swiperOption: {
+          pagination: '.swiper-pagination',
+          slidesPerView: 3,
+          paginationClickable: true,
+          spaceBetween: 10,
+          freeMode: true
+        }
       }
     },
     methods:{
@@ -98,7 +127,7 @@
         }
         this.ymd = year+"-"+month+"-"+day;
         // console.log(this.ymd);
-      }
+      },
     },
     created() {
       // let options = {
@@ -108,7 +137,6 @@
       // }
       //topic时间内容JSON
       this.$http.get('https://api.leancloud.cn/1.1/classes/topic').then((success) => {
-        this.one = false;
         this.tranform = false;
         this.newDate();
         this.topicContentBody = success.body.results;
@@ -122,9 +150,14 @@
       // }, (error) => {
       //   console.log(error)
       // })
-      // if(!this.one && !this.two){
-      //   this.tranform = false
-      // }
+
+      //热门话题
+      this.$http.get('https://api.leancloud.cn/1.1/classes/topicMore').then((success) => {
+        this.topicMoreBody = success.body.results;
+      }, (error) => {
+        console.log(error)
+      })
+
     },
     components: {
       publicheader,
