@@ -73,14 +73,19 @@ Vue.use(Vuex)
       }
     },
     {
+      path: "/goodsCharts",
+      name: "goodsCharts",
+      component: (resolve) => {
+        require(["../components/goodsCharts.vue"], resolve);
+      }
+    },
+    {
       path: "/user",
       name: "user",
       component: (resolve) => {
         require(["../components/user.vue"], resolve);
       },
       meta: {
-        navShow: false,
-        cname: '二级页面',
         requireAuth: true,// 添加该字段，表示进入这个路由是需要登录的
       }
     },
@@ -89,10 +94,6 @@ Vue.use(Vuex)
       name: "login",
       component: (resolve) => {
         require(["../components/login.vue"], resolve);
-      },
-      meta: {
-        navShow: false,
-        cname: '二级页面',
       }
     },
     {
@@ -102,9 +103,7 @@ Vue.use(Vuex)
         require(["../components/editPage.vue"], resolve);
       },
       meta: {
-        navShow: false,
         requireAuth: true,
-        cname: '二级页面',
       }
     },
     {
