@@ -12,14 +12,24 @@
       </mu-flexbox>
       <publictitle :publictitle="publictitle"></publictitle>
       <ul>
-        <li><goodslist></goodslist></li>
-        <li><goodslist></goodslist></li>
-        <li><goodslist></goodslist></li>
-        <li><goodslist></goodslist></li>
+
+          <li v-for="item in goodsBody">
+            <router-link :to="{ name:'goodsDetailPage',params:{ id:item.objectId } }">
+              <mu-list>
+                <img :src="item.goodsImg.url" class="goodsListImg" >
+                <div class="goodsListContent">
+                  <p class="goodsTitle">{{ item.goodsTitle }}</p>
+                  <p class="goodsListTime">{{ ymd > item.createdAt.substring(0,10) ? item.createdAt.substring(0,10):item.createdAt.substr(11,5) }}</p>
+                </div>
+              </mu-list>
+            </router-link>
+          </li>
+
+
       </ul>
     </div>
 </template>
-<style lang="less">
+<style lang="less" scoped>
   @import './../assets/css/public.css';
   .flexItem{
     background-color: #ffffff;
@@ -31,26 +41,73 @@
     width: 100%;
     height: 100%;
   }
+  .goodsListImg{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 10px 20px;
+    background: #03a9f4;
+  }
+  .goodsListContent{
+    margin: 10px 20px 0 0;
+  }
+  .goodsListContent p{
+    color: #000;
+  }
+  .goodsTitle{
+    height: 42px;
+  }
+  .goodsListTime{
+    float: right;
+  }
 </style>
 <script type="text/ecmascript-6">
   import publicheader from './public/publicHeader'
   import swiper from './public/swiper'
   import publictitle from './public/publicTitle'
-  import goodslist from './public/goodsList'
 
     export default{
       data() {
         return {
           menushow: true,
           headtitle: "干货",
-          publictitle: "热门干货"
+          publictitle: "热门干货",
+          goodsBody: [],
+          tranform: this.$store.state.tranform,
+          ymd: '',
         }
       },
       components: {
         publicheader,
         swiper,
         publictitle,
-        goodslist
-      }
+      },
+      methods:{
+        //时间格式处理
+        newDate(){
+          let myDate = new Date();
+          let year = 1900+myDate.getYear();
+          let month = myDate.getMonth()+1;
+          if(month<10){
+            month = "0" + month
+          }
+          let day = myDate.getDay()+2;
+          if(day<10){
+            day = "0" + day
+          }
+          this.ymd = year+"-"+month+"-"+day;
+          // console.log(this.ymd);
+        }
+      },
+      created() {
+        this.$http.get('https://api.leancloud.cn/1.1/classes/goods').then((success) => {
+          this.tranform = false;
+          this.newDate();
+          this.goodsBody = success.body.results;
+        }, (error) => {
+          console.log(error)
+        })
+
+      },
     }
 </script>

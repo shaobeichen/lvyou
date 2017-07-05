@@ -66,6 +66,13 @@ Vue.use(Vuex)
       }
     },
     {
+      path: '/goodsDetailPage/:id',
+      name: 'goodsDetailPage',
+      component: (resolve) => {
+        require(["../components/goodsDetailPage.vue"], resolve);
+      }
+    },
+    {
       path: "/user",
       name: "user",
       component: (resolve) => {
@@ -134,6 +141,7 @@ router.beforeEach((to, from, next) => {
     next();
   }
 })
+
 
 
 export default router;
