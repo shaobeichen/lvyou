@@ -30,9 +30,6 @@
     text-align: center;
     margin: 30px;
   }
-  .loginRadius {
-    border-radius: 20px;
-  }
 </style>
 <script type="text/ecmascript-6">
   import backbar from './public/backBar.vue'
@@ -111,7 +108,7 @@
             this.showSnackbar();
           })
         },
-      //登录操作
+      //注册操作
       doRegister(){
           let options = {
             username: this.inputRegUsername,

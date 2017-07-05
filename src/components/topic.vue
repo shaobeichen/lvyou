@@ -13,10 +13,10 @@
             <div class="topicCardAll">
               <div class="topicCardUser">
                 <div class="topicCardUserImg">
-                  <mu-avatar slot="left" src="" />
+                  <mu-avatar slot="left" src="http://ac-gdylhkfz.clouddn.com/aaf215d333dcd54b137b.jpg" />
                 </div>
                 <div class="topicCardUserRight">
-                  <p class="topicCardUserName">LeachZhou</p>
+                  <p class="topicCardUserName">leachzhou</p>
                   <p class="topicCardTime">{{ ymd > item.createdAt.substring(0,10) ? item.createdAt.substring(0,10):item.createdAt.substr(11,5) }}</p>
                 </div>
               </div>
@@ -29,7 +29,9 @@
             </div>
           </li>
         </ul>
-        <addbutton></addbutton>
+        <router-link to="/editPage">
+          <addbutton></addbutton>
+        </router-link>
       </div>
 
 
@@ -74,11 +76,11 @@
         topicBannerDev: "那些让人羡慕的爱情,多么美丽，和大家说说吧那些让人羡慕的爱情,多么美丽，和大家说说吧！",
         publictitle: "热门动态",
         topicContentBody: [],
-        topicUserBody: [],
+        // topicUserBody: [],
         tranform: this.$store.state.tranform,
         ymd: '',
         one: true,
-        two: true
+        two: true,
       }
     },
     methods:{
@@ -99,11 +101,11 @@
       }
     },
     created() {
-      let options = {
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        // params: { 'cql': "select * from _User"}
-        params: { 'cql': "select _User.username from _User  where _User.objectId in ( select topic.userId from topic )"}
-      }
+      // let options = {
+      //   // headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      //   // params: { 'cql': "select * from _User"}
+      //   params: { 'cql': "select * , include userId from topic)"}
+      // }
       //topic时间内容JSON
       this.$http.get('https://api.leancloud.cn/1.1/classes/topic').then((success) => {
         this.one = false;
@@ -114,12 +116,12 @@
         console.log(error)
       })
       //用户头像名称JSON
-      this.$http.get('https://api.leancloud.cn/1.1/cloudQuery',options).then((success) => {
-        this.two = false;
-        this.topicUserBody = success.body.results;
-      }, (error) => {
-        console.log(error)
-      })
+      // this.$http.get('https://api.leancloud.cn/1.1/cloudQuery',options).then((success) => {
+      //   this.two = false;
+      //   this.topicUserBody = success.body.results;
+      // }, (error) => {
+      //   console.log(error)
+      // })
       // if(!this.one && !this.two){
       //   this.tranform = false
       // }

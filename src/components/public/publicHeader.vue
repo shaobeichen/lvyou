@@ -116,6 +116,7 @@
           this.dialog = false;
           this.open = false;
           this.docked = true;
+          this.$router.push('/');
           window.location.reload();
         }
       },

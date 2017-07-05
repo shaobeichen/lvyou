@@ -5,6 +5,9 @@
 .detailMargin {
   margin-top: 56px;
 }
+.loginRadius {
+  border-radius: 20px;
+}
 .backAddFont {
   background: #ffffff;
   font-family: "Microsoft YaHei UI";

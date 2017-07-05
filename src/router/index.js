@@ -89,6 +89,18 @@ Vue.use(Vuex)
       }
     },
     {
+      path: "/editPage",
+      name: "editPage",
+      component: (resolve) => {
+        require(["../components/editPage.vue"], resolve);
+      },
+      meta: {
+        navShow: false,
+        requireAuth: true,
+        cname: '二级页面',
+      }
+    },
+    {
       path: "/test",
       name: "test",
       component: (resolve) => {
