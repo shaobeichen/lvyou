@@ -37,6 +37,13 @@ Vue.use(Vuex)
       // }]
     },
     {
+      path: '/feedBack',
+      name: 'feedBack',
+      component: (resolve) => {
+        require(["../components/feedBack.vue"], resolve);
+      }
+    },
+    {
       path: '/detailPage/:id',
       name: 'detailPage',
       component: (resolve) => {

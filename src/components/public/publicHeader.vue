@@ -20,22 +20,29 @@
         </div>
         <mu-list>
           <mu-list-item title="我的文章">
-            <mu-icon value="home" slot="left"/>
+            <mu-icon value="import_contacts" slot="left" color="#03A9F4"/>
           </mu-list-item>
           <mu-list-item title="我的收藏">
-            <mu-icon value="home" slot="left"/>
+            <mu-icon value="loyalty" slot="left" color="#03A9F4"/>
           </mu-list-item>
+          <router-link to="/feedBack">
+            <mu-list-item title="意见反馈">
+              <mu-icon value="feedback" slot="left" color="#03A9F4"/>
+            </mu-list-item>
+          </router-link>
+          <mu-list-item title="咨询客服" @click="phoneDialogOpen">
+            <mu-icon value="call" slot="left" color="#03A9F4"/>
+          </mu-list-item>
+          <mu-dialog :open="phoneDialog" @close="phoneDialogClose">
+            确定拨打当前电话（400-123-123）吗？
+            <mu-flat-button slot="actions" @click="phoneDialogClose" primary label="取消"/>
+            <mu-flat-button slot="actions" primary @click="phone" label="拨打"/>
+          </mu-dialog>
           <mu-list-item title="设置">
-            <mu-icon value="home" slot="left"/>
-          </mu-list-item>
-          <mu-list-item title="意见反馈">
-            <mu-icon value="home" slot="left"/>
-          </mu-list-item>
-          <mu-list-item title="咨询客服">
-            <mu-icon value="home" slot="left"/>
+            <mu-icon value="settings" slot="left" color="#03A9F4"/>
           </mu-list-item>
           <mu-list-item title="退出登录" v-if="this.$store.state.sessionToken" @click="logoutDialogOpen">
-            <mu-icon value="system_update_alt" slot="left" />
+            <mu-icon value="exit_to_app" slot="left" color="#03A9F4"/>
           </mu-list-item>
           <mu-dialog :open="dialog" @close="logoutDialogClose">
             确定退出当前账号吗？
@@ -46,7 +53,7 @@
       </mu-drawer>
     </div>
 </template>
-<style lang="less" >
+<style lang="less" scoped>
   .indexTopFixed{
     position: fixed;
     width: 100%;
@@ -88,12 +95,17 @@
           open: false,
           //侧滑栏显示遮盖层
           docked: true,
-          //dialog开关
-          dialog: false
+          //注销dialog开关
+          dialog: false,
+          //咨询dialog开关
+          phoneDialog: false
         }
       },
       methods: {
         ...mapActions(['logOut']),
+        phone(){
+          window.location.href = 'tel://400123123'
+        },
         //控制侧滑栏
         toggle (flag) {
           this.open = !this.open;
@@ -104,6 +116,12 @@
         },
         logoutDialogClose(){
           this.dialog = false
+        },
+        phoneDialogOpen(){
+          this.phoneDialog = true
+        },
+        phoneDialogClose(){
+          this.phoneDialog = false
         },
         //注销
         logout(){
