@@ -26,7 +26,8 @@ module.exports = {
     port: 8080,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    // assetsPublicPath: '/',
+    assetsPublicPath: './',
     proxyTable: {
       // '/api': {
       //   target: 'https://api.leancloud.cn:443/1.1/',
