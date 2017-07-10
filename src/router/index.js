@@ -38,6 +38,16 @@ Vue.use(Vuex)
       // }]
     },
     {
+      path: "/search",
+      name: "search",
+      component: (resolve) => {
+        require(["../components/search.vue"], resolve);
+      },
+      meta: {
+        isSearch:true
+      }
+    },
+    {
       path: '/indexFourOne',
       name: 'indexFourOne',
       component: (resolve) => {

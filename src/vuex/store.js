@@ -22,7 +22,9 @@ const state = {
   drawerUsername:'登录 | 注册',
   headImg:'',
   //返回按钮是否是第一次按
-  isFirst: true
+  isFirst: true,
+  //搜索页显示热门标签
+  searchBtn: true
 }
 
 const mutations = {

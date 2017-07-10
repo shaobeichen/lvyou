@@ -2,6 +2,7 @@
     <div class="publicheader">
       <mu-appbar :title="headtitle" class="indexTopFixed">
         <mu-icon-button icon='menu' slot="left" v-if='menushow' @click="toggle(true)"/>
+        <mu-icon-button icon='search' slot="right" v-if='menushow' @click="search"/>
       </mu-appbar>
 
       <mu-drawer :open="open" :docked="docked" @close="toggle()">
@@ -136,6 +137,9 @@
           this.docked = true;
           this.$router.push('/');
           window.location.reload();
+        },
+        search(){
+          this.$router.push('/search');
         }
       },
 

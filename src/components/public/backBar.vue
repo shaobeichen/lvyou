@@ -1,11 +1,14 @@
 <template>
-    <div class="backBar">
+    <div class="backBar font">
         <mu-appbar>
           <mu-icon-button icon="arrow_back" slot="left" @click="routerBack"/>
+          <mu-text-field v-show="$route.meta.isSearch"  class="searchField" slot="right" hintText="请输入搜索内容"/>
+          <mu-icon-button v-show="$route.meta.isSearch" icon="search" slot="right" @click="searchBtn"/>
         </mu-appbar>
     </div>
 </template>
 <style lang="less" scoped>
+  @import '../../assets/css/public.css';
   .backBar{
     position: fixed;
     width: 100%;
@@ -13,7 +16,10 @@
     left: 0;
     z-index:998;
   }
-
+  .searchField{
+    color: #FFF;
+    margin-bottom: 0;
+  }
 
 </style>
 <script type="text/ecmascript-6">
@@ -38,6 +44,9 @@
         }else{
           this.$router.go(-1)
         }
+      },
+      searchBtn(){
+        this.searchBtn = false
       }
     }
   }
