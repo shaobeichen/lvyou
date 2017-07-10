@@ -1,7 +1,7 @@
 <template>
     <div class="topicBanner">
       <div class="writeFilter"></div>
-      <img src="http://p4.music.126.net/aEzLASFy9UnIkIpdMm4EtQ==/19023750183861398.jpg" class="topicBannerImg">
+      <img src="https://images.simpletour.com/simpletour/images/wechat_act/52c03fd714671ea3d2a416b33cb1edcf.jpg " class="topicBannerImg">
       <div class="topicBannerRelative">
         <div class="topicBannerDiv">
           <div class="borderTop"></div>
@@ -41,7 +41,7 @@
     width: 100%;
     height: 200px;
     background: #000000;
-    opacity: 0.4;
+    opacity: 0.5;
   }
   .borderTop{
     border-top: 2px solid #dedede;
