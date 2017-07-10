@@ -9,6 +9,7 @@
           <mu-card-media>
             <img :src="detailBody.CoverMap.url">
           </mu-card-media>
+          <br>
           {{ detailBody.content }}
         </mu-content-block>
       </div>
