@@ -8,7 +8,7 @@
 
       <mu-flexbox :gutter="0">
         <mu-flexbox-item class="flexItem">
-          <img src="../assets/image/indexFour1.png" />
+          <img src="../assets/image/indexFour1.jpg" />
         </mu-flexbox-item>
         <mu-flexbox-item class="flexItem" gutter="0">
           <img src="../assets/image/indexFour2.png" />
@@ -16,7 +16,7 @@
       </mu-flexbox>
       <mu-flexbox :gutter="0">
         <mu-flexbox-item class="flexItem">
-          <img src="../assets/image/indexFour3.png" />
+          <img src="../assets/image/indexFour3.jpg" />
         </mu-flexbox-item>
         <mu-flexbox-item class="flexItem">
           <img src="../assets/image/indexFour4.png" />
@@ -31,7 +31,7 @@
             <mu-card-media>
               <img :src="item.CoverMap.url" />
             </mu-card-media>
-            <mu-card-title :title="item.title" :subTitle=" ymd > item.createdAt.substring(0,10) ? item.createdAt.substring(0,10):item.createdAt.substr(11,5)"/>
+            <mu-card-title :title="item.title"  :subTitle=" ymd > item.createdAt.substring(0,10) ? item.createdAt.substring(0,10):item.createdAt.substr(11,5)"/>
           </mu-card>
         </router-link>
       </div>
@@ -41,7 +41,6 @@
 </template>
 <style  lang="less" scoped>
     @import './../assets/css/public.css';
-
     .flexItem{
       width: 100%;
       height: 75px;
