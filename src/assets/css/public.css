@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 .indexMargin {
   margin-bottom: 56px;
   margin-top: 56px;
@@ -11,6 +15,9 @@
 
 .backAddFont {
   background: #ffffff;
+  font-family: "Microsoft YaHei UI";
+}
+.font {
   font-family: "Microsoft YaHei UI";
 }
 

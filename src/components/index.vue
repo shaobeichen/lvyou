@@ -7,20 +7,28 @@
       <swiper></swiper>
 
       <mu-flexbox :gutter="0">
-        <mu-flexbox-item class="flexItem">
-          <img src="../assets/image/indexFour1.jpg" />
-        </mu-flexbox-item>
-        <mu-flexbox-item class="flexItem" gutter="0">
-          <img src="../assets/image/indexFour2.png" />
-        </mu-flexbox-item>
+        <router-link to="/indexFourOne">
+          <mu-flexbox-item class="flexItem">
+            <img src="../assets/image/indexFour1.jpg" />
+          </mu-flexbox-item>
+        </router-link>
+        <router-link to="/indexFourTwo">
+          <mu-flexbox-item class="flexItem" gutter="0">
+            <img src="../assets/image/indexFour2.png" />
+          </mu-flexbox-item>
+        </router-link>
       </mu-flexbox>
       <mu-flexbox :gutter="0">
-        <mu-flexbox-item class="flexItem">
-          <img src="../assets/image/indexFour3.jpg" />
-        </mu-flexbox-item>
-        <mu-flexbox-item class="flexItem">
-          <img src="../assets/image/indexFour4.png" />
-        </mu-flexbox-item>
+        <router-link to="/indexFourThree">
+          <mu-flexbox-item class="flexItem">
+            <img src="../assets/image/indexFour3.jpg" />
+          </mu-flexbox-item>
+        </router-link>
+        <router-link to="/indexFourFour">
+          <mu-flexbox-item class="flexItem">
+            <img src="../assets/image/indexFour4.png" />
+          </mu-flexbox-item>
+        </router-link>
       </mu-flexbox>
 
       <publictitle :publictitle="publictitle"></publictitle>

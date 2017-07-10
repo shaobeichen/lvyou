@@ -38,6 +38,34 @@ Vue.use(Vuex)
       // }]
     },
     {
+      path: '/indexFourOne',
+      name: 'indexFourOne',
+      component: (resolve) => {
+        require(["../components/indexFourOne.vue"], resolve);
+      }
+    },
+    {
+      path: '/indexFourTwo',
+      name: 'indexFourTwo',
+      component: (resolve) => {
+        require(["../components/indexFourTwo.vue"], resolve);
+      }
+    },
+    {
+      path: '/indexFourThree',
+      name: 'indexFourThree',
+      component: (resolve) => {
+        require(["../components/indexFourThree.vue"], resolve);
+      }
+    },
+    {
+      path: '/indexFourFour',
+      name: 'indexFourFour',
+      component: (resolve) => {
+        require(["../components/indexFourFour.vue"], resolve);
+      }
+    },
+    {
       path: '/feedBack',
       name: 'feedBack',
       component: (resolve) => {
