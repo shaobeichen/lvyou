@@ -1,22 +1,24 @@
 <template>
     <div class="goods indexMargin backAddFont">
+      <spinner v-if='tranform'></spinner>
       <publicheader :menushow="menushow" :headtitle="headtitle" ></publicheader>
-      <swiper></swiper>
-      <mu-flexbox :gutter="0">
+      <div v-if='!tranform'>
+        <swiper></swiper>
+        <mu-flexbox :gutter="0">
           <mu-flexbox-item class="flexItem">
             <mu-flat-button label="干货分类" class="flatButton " icon="dashboard" primary />
           </mu-flexbox-item>
 
           <mu-flexbox-item class="flexItem" gutter="0">
             <router-link to="/goodsCharts">
-            <mu-flat-button label="干货排行" class="flatButton " icon="list" primary />
+              <mu-flat-button label="干货排行" class="flatButton " icon="list" primary />
             </router-link>
           </mu-flexbox-item>
 
 
-      </mu-flexbox>
-      <publictitle :publictitle="publictitle"></publictitle>
-      <ul>
+        </mu-flexbox>
+        <publictitle :publictitle="publictitle"></publictitle>
+        <ul>
 
           <li v-for="item in goodsBody">
             <router-link :to="{ name:'goodsDetailPage',params:{ id:item.objectId } }">
@@ -31,7 +33,9 @@
           </li>
 
 
-      </ul>
+        </ul>
+      </div>
+
     </div>
 </template>
 <style lang="less" scoped>
@@ -67,6 +71,7 @@
   }
 </style>
 <script type="text/ecmascript-6">
+  import spinner from './public/spinner'
   import publicheader from './public/publicHeader'
   import swiper from './public/swiper'
   import publictitle from './public/publicTitle'
@@ -86,6 +91,7 @@
         publicheader,
         swiper,
         publictitle,
+        spinner
       },
       methods:{
         //时间格式处理
