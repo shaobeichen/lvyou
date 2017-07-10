@@ -37,7 +37,10 @@
         <router-link :to="{ name:'detailPage',params:{ id:item.objectId } }">
           <mu-card>
             <mu-card-media>
-              <img :src="item.CoverMap.url" />
+                <!--<img  :src="item.CoverMap.url" class="cardImg" />-->
+                  <img class="cardImg" v-lazy="{ src: item.CoverMap.url,
+                  error:'https://m.simpletour.com/images/defalut-img@588250.png',
+                  loading: 'http://cdn.uehtml.com/201402/1392662591495_1140x0.gif'}"/>
             </mu-card-media>
             <mu-card-title :title="item.title"  :subTitle=" ymd > item.createdAt.substring(0,10) ? item.createdAt.substring(0,10):item.createdAt.substr(11,5)"/>
           </mu-card>
@@ -64,7 +67,10 @@
       margin: 20px 0;
       background: #fff;
     }
-
+    .cardImg{
+      width: 100%;
+      height: auto;
+    }
 
 </style>
 <script type="text/ecmascript-6">
@@ -82,7 +88,6 @@
         headtitle: "发现",
         publictitle: "发现美好",
         ymd: '',
-
       }
     },
     methods:{
@@ -94,7 +99,7 @@
         if(month<10){
           month = "0" + month
         }
-        let day = myDate.getDay()+2;
+        let day = myDate.getDate();
         if(day<10){
           day = "0" + day
         }

@@ -4,14 +4,16 @@
     <spinner v-if='tranform'></spinner>
     <div v-if='!tranform' class="detailMargin font">
       <div class="oneImg">
-        <img class="img" alt src="https://images.simpletour.com/simpletour/images/wechat_act/95ca6d6b88937091768ad2a73ca82a5f.jpg" />
+        <img class="img"src='https://images.simpletour.com/simpletour/images/wechat_act/95ca6d6b88937091768ad2a73ca82a5f.jpg' />
       </div>
       <div class="oneImg top">
-        <img class="img" alt src="https://images.simpletour.com/simpletour/images/wechat_act/564c242bc47feb135e04aa3acc4d4222.jpg" />
+        <img class="img"  src='https://images.simpletour.com/simpletour/images/wechat_act/564c242bc47feb135e04aa3acc4d4222.jpg' />
       </div>
       <div class="doubleImg">
         <div class="doubleImgGroup right bottom">
-          <img alt src="https://images.simpletour.com/simpletour/images/app_tourism/2722afbc80b0d5fbe5083b91e419ed7f.jpg!wechat272216" />
+          <img  v-lazy="{ src: 'https://images.simpletour.com/simpletour/images/app_tourism/2722afbc80b0d5fbe5083b91e419ed7f.jpg!wechat272216',
+                  error:'https://m.simpletour.com/images/defalut-img@588250.png',
+                  loading: 'http://cdn.uehtml.com/201402/1392662591495_1140x0.gif'}" />
           <div class="imgTitle">
             至尊体验 | 成都-九寨沟3日往返车位（金龙国际度假酒店）
           </div>
@@ -21,7 +23,9 @@
           </div>
         </div>
         <div class="doubleImgGroup bottom">
-          <img alt src="https://images.simpletour.com/simpletour/images/app_tourism/4f5807c1c13005a6d904d7834cca13f1.jpg!wechat272216" />
+          <img  v-lazy="{ src: 'https://images.simpletour.com/simpletour/images/app_tourism/4f5807c1c13005a6d904d7834cca13f1.jpg!wechat272216',
+                  error:'https://m.simpletour.com/images/defalut-img@588250.png',
+                  loading: 'http://cdn.uehtml.com/201402/1392662591495_1140x0.gif'}" />
           <div class="imgTitle">
             周六出发 | 成都-四姑娘山2日生态游（含双桥沟、长坪沟门票+双沟观光车+舒适住宿）
           </div>
@@ -31,7 +35,9 @@
           </div>
         </div>
         <div class="doubleImgGroup right bottom">
-          <img alt src="https://images.simpletour.com/simpletour/images/app_tourism/9aab02a7d31bc6570d6aacfa308e97a2.jpg!wechat272216" />
+          <img  v-lazy="{ src: 'https://images.simpletour.com/simpletour/images/app_tourism/9aab02a7d31bc6570d6aacfa308e97a2.jpg!wechat272216',
+                  error:'https://m.simpletour.com/images/defalut-img@588250.png',
+                  loading: 'http://cdn.uehtml.com/201402/1392662591495_1140x0.gif'}" />
           <div class="imgTitle">
             避暑休闲 | 乐山大佛、峨眉山2日（含舒适住宿、峨眉山＆乐山大佛门票）
           </div>
@@ -41,7 +47,9 @@
           </div>
         </div>
         <div class="doubleImgGroup bottom">
-          <img alt src="https://images.simpletour.com/simpletour/images/app_tourism/ab2b7b6b50f81876b98baf99f2b7ea1f.jpg!wechat272216" />
+          <img  v-lazy="{ src: 'https://images.simpletour.com/simpletour/images/app_tourism/ab2b7b6b50f81876b98baf99f2b7ea1f.jpg!wechat272216',
+                  error:'https://m.simpletour.com/images/defalut-img@588250.png',
+                  loading: 'http://cdn.uehtml.com/201402/1392662591495_1140x0.gif'}" />
           <div class="imgTitle">
             避暑首选 | 都江堰、青城山1日往返畅玩套餐（含都江堰、青城山门票）
           </div>
@@ -52,7 +60,7 @@
         </div>
       </div>
       <div class="oneImg">
-        <img class="img" alt src="https://images.simpletour.com/simpletour/images/wechat_act/6c2271120642a8a2c3c525a90760192c.jpg" />
+        <img class="img" alt src='https://images.simpletour.com/simpletour/images/wechat_act/6c2271120642a8a2c3c525a90760192c.jpg' />
       </div>
 
     </div>

@@ -116,12 +116,12 @@
       //时间格式处理
       newDate(){
         let myDate = new Date();
-        let year = 1900+myDate.getYear();
+        let year = 1900+myDate.getFullYear();
         let month = myDate.getMonth()+1;
         if(month<10){
           month = "0" + month
         }
-        let day = myDate.getDay()+2;
+        let day = myDate.getDate();
         if(day<10){
           day = "0" + day
         }

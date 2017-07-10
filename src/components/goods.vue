@@ -23,7 +23,9 @@
           <li v-for="item in goodsBody">
             <router-link :to="{ name:'goodsDetailPage',params:{ id:item.objectId } }">
               <mu-list>
-                <img :src="item.goodsImg.url" class="goodsListImg" >
+                <img  v-lazy="{ src: item.goodsImg.url,
+                  error:'https://m.simpletour.com/images/defalut-img@588250.png',
+                  loading: 'http://cdn.uehtml.com/201402/1392662591495_1140x0.gif'}" class="goodsListImg" >
                 <div class="goodsListContent">
                   <p class="goodsTitle">{{ item.goodsTitle }}</p>
                   <p class="goodsListTime">{{ ymd > item.createdAt.substring(0,10) ? item.createdAt.substring(0,10):item.createdAt.substr(11,5) }}</p>
@@ -55,7 +57,7 @@
     height: 60px;
     float: left;
     margin: 10px 20px;
-    background: #03a9f4;
+    background: #8e8e8e;
   }
   .goodsListContent{
     margin: 10px 20px 0 0;
@@ -97,17 +99,18 @@
         //时间格式处理
         newDate(){
           let myDate = new Date();
-          let year = 1900+myDate.getYear();
+          let year = myDate.getFullYear();
           let month = myDate.getMonth()+1;
           if(month<10){
             month = "0" + month
           }
-          let day = myDate.getDay()+2;
+          let day = myDate.getDate();
           if(day<10){
             day = "0" + day
           }
           this.ymd = year+"-"+month+"-"+day;
           // console.log(this.ymd);
+
         }
       },
       created() {
