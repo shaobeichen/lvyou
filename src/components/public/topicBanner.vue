@@ -1,5 +1,6 @@
 <template>
     <div class="topicBanner">
+      <div class="writeFilter"></div>
       <img src="http://p4.music.126.net/aEzLASFy9UnIkIpdMm4EtQ==/19023750183861398.jpg" class="topicBannerImg">
       <div class="topicBannerRelative">
         <div class="topicBannerDiv">
@@ -30,8 +31,17 @@
   .topicBannerImg{
     width: 100%;
     height: 200px;
+    /*background: #000000;*/
+    filter:alpha(Opacity=80);
+    /*-moz-opacity:0.5;*/
+
+  }
+  .writeFilter{
+    position: absolute;
+    width: 100%;
+    height: 200px;
     background: #000000;
-    filter: blur(2px);
+    opacity: 0.4;
   }
   .borderTop{
     border-top: 2px solid #dedede;
