@@ -44,7 +44,7 @@ Vue.use(Vuex)
         require(["../components/search.vue"], resolve);
       },
       meta: {
-        isSearch:true
+        isSearch:true,
       }
     },
     {
@@ -87,6 +87,9 @@ Vue.use(Vuex)
       name: 'detailPage',
       component: (resolve) => {
         require(["../components/detailPage.vue"], resolve);
+      },
+      meta: {
+        keepAlive: false
       }
     },
     {
@@ -116,6 +119,9 @@ Vue.use(Vuex)
       name: 'goodsDetailPage',
       component: (resolve) => {
         require(["../components/goodsDetailPage.vue"], resolve);
+      },
+      meta: {
+        keepAlive: false
       }
     },
     {

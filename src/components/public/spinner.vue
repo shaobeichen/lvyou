@@ -7,13 +7,14 @@
     <div class="rect5"></div>
   </div>
 </template>
-<style lang="less" >
+<style lang="less" scoped >
   .spinner {
-    margin: 300px auto;
-    width: 50px;
+    margin: 290px auto;
+    width: 100%;
     height: 60px;
     text-align: center;
     font-size: 10px;
+    background-color: #ffffff;
     z-index: 1000;
   }
 

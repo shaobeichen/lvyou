@@ -5,7 +5,7 @@
       <div v-if="!tranform">
         <div class="userBg">
           <div class="userHead">
-            <img src="../assets/image/defaultUser.png" v-if="!this.$store.state.sessionToken">
+            <img src="./../assets/image/defaultUser.png" v-if="!this.$store.state.sessionToken">
             <img :src="this.$store.state.headImg" v-if="this.$store.state.sessionToken">
             <div class="userName">
               {{this.$store.state.drawerUsername}}
