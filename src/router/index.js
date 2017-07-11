@@ -17,7 +17,8 @@ Vue.use(Vuex)
       },
       meta: {
         navShow: true,      // 表示此路由需要显示底部导航栏
-        cname: '一级页面'
+        cname: '一级页面',
+        keepAlive: true
       }
     },
     {
@@ -29,6 +30,7 @@ Vue.use(Vuex)
       meta: {
         navShow: true,
         cname: '一级页面',
+        keepAlive: true
       },
       // children:[{
       //   path: '/index/:id',
@@ -45,6 +47,7 @@ Vue.use(Vuex)
       },
       meta: {
         isSearch:true,
+        keepAlive: true
       }
     },
     {
@@ -52,6 +55,9 @@ Vue.use(Vuex)
       name: 'indexFourOne',
       component: (resolve) => {
         require(["../components/indexFourOne.vue"], resolve);
+      },
+      meta: {
+        keepAlive: true
       }
     },
     {
@@ -59,6 +65,9 @@ Vue.use(Vuex)
       name: 'indexFourTwo',
       component: (resolve) => {
         require(["../components/indexFourTwo.vue"], resolve);
+      },
+      meta: {
+        keepAlive: true
       }
     },
     {
@@ -66,6 +75,9 @@ Vue.use(Vuex)
       name: 'indexFourThree',
       component: (resolve) => {
         require(["../components/indexFourThree.vue"], resolve);
+      },
+      meta: {
+        keepAlive: true
       }
     },
     {
@@ -73,6 +85,9 @@ Vue.use(Vuex)
       name: 'indexFourFour',
       component: (resolve) => {
         require(["../components/indexFourFour.vue"], resolve);
+      },
+      meta: {
+        keepAlive: true
       }
     },
     {
@@ -80,6 +95,9 @@ Vue.use(Vuex)
       name: 'feedBack',
       component: (resolve) => {
         require(["../components/feedBack.vue"], resolve);
+      },
+      meta: {
+        keepAlive: true
       }
     },
     {
@@ -101,6 +119,7 @@ Vue.use(Vuex)
       meta: {
         navShow: true,
         cname: '一级页面',
+        keepAlive: true
       }
     },
     {
@@ -112,6 +131,7 @@ Vue.use(Vuex)
       meta: {
         navShow: true,
         cname: '一级页面',
+        keepAlive: true
       }
     },
     {
@@ -129,6 +149,9 @@ Vue.use(Vuex)
       name: "goodsCharts",
       component: (resolve) => {
         require(["../components/goodsCharts.vue"], resolve);
+      },
+      meta: {
+        keepAlive: true
       }
     },
     {
@@ -139,6 +162,7 @@ Vue.use(Vuex)
       },
       meta: {
         requireAuth: true,// 添加该字段，表示进入这个路由是需要登录的
+        keepAlive: true
       }
     },
     {
@@ -146,6 +170,9 @@ Vue.use(Vuex)
       name: "login",
       component: (resolve) => {
         require(["../components/login.vue"], resolve);
+      },
+      meta: {
+        keepAlive: true
       }
     },
     {
@@ -156,6 +183,7 @@ Vue.use(Vuex)
       },
       meta: {
         requireAuth: true,
+        keepAlive: true
       }
     },
     {
