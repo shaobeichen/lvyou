@@ -142,7 +142,12 @@
           this.$router.push('/search');
         }
       },
-
+      // created(){
+      //   this.$forceUpdate()
+      // },
+      // deactivated(){
+      //   this.$destroy()
+      // },
       props:[ 'menushow', 'headtitle' ]
     }
 </script>

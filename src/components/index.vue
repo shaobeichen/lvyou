@@ -119,6 +119,7 @@
       }, (error) => {
         console.log(error)
       })
+
     },
     components: {
       spinner,

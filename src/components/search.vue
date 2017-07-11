@@ -73,18 +73,14 @@
   export default{
     data(){
       return{
-        tranform: this.$store.state.tranform,
+        // tranform: this.$store.state.tranform,
         searchBtn: this.$store.state.searchBtn,
         searchField: "",
         searchEmpty: false
       }
     },
     created() {
-      this.$http.get('https://api.leancloud.cn/1.1/classes/explore').then((success) => {
-        this.tranform = false;
-      }, (error) => {
-        console.log(error)
-      })
+
     },
     components:{
       spinner

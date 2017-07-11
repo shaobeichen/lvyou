@@ -39,7 +39,7 @@
     data () {
       return {
         //loading动画
-        tranform: this.$store.state.tranform,
+        // tranform: this.$store.state.tranform,
         //登录注册切换
         activeTab: 'login',
         //登录用户名密码和注册登录密码
@@ -57,12 +57,12 @@
       spinner
     },
     created(){
-      //判断网络状态
-      this.$http.get('https://api.leancloud.cn/1.1/classes/explore').then((success) => {
-        this.tranform = false;
-      }, (error) => {
-        console.log(error)
-      })
+      // //判断网络状态
+      // this.$http.get('https://api.leancloud.cn/1.1/classes/explore').then((success) => {
+      //   this.tranform = false;
+      // }, (error) => {
+      //   console.log(error)
+      // })
     },
     methods: {
       //使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用
