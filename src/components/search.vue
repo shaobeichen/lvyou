@@ -64,7 +64,7 @@
     width: 45%;
     height: 30px;
     color: #8e8e8e;
-    line-height: 24px;
+    line-height: 27px;
     border: 1px #b8b8b8 solid;
     border-radius: 18px;
     text-align: center;
