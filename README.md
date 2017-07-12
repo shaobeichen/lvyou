@@ -1,6 +1,7 @@
 <p align="center"><img src="http://img.blog.csdn.net/20170711181920470"  width="200"></p>
 
-#Lvyou
+# Lvyou
+
 ![npm](https://img.shields.io/badge/npm-3.8.9-green.svg)                                     ![npm](https://img.shields.io/badge/vue-2.2.1-green.svg)              ![npm](https://img.shields.io/badge/vue--resource-1.2.1-green.svg)            ![npm](https://img.shields.io/badge/vue--router-2.2.0-green.svg)      ![npm](https://img.shields.io/badge/vuex-2.2.1-green.svg)
 
 > Vue.js 初步进阶案例，适合vue入门者进阶
@@ -44,6 +45,7 @@ npm run build
 ```
 ### 线上预览
  [线上预览地址](https://zhou1178539345.github.io/lvyou)
+
 友情提示：建议在开发者模式适配下浏览网站
 
 ### 功能
@@ -68,55 +70,58 @@ npm run build
 友情告知：后台数据采用leancloud RestAPI，因本人能力有限，一些请求未能请求成功，如果有人能够解决问题，欢迎随时[pull request](https://github.com/zhou1178539345/lvyou/pulls)。
 
 ### 目录结构
+```
 ├─ build                                   // webpack配置文件
 ├─ config                                  // 项目设置
 ├─ docs                                    // 项目部署文件
 ├─ src
 │  ├─ assets                               // 静态文件
 │  │  ├─ css                               // 公共css
-│  │  └─ image                                      // 图片文件
-│  ├─ components                                // 页面
-│  │  ├─ public                                      // 公共组件
-│  │  │  ├─ addButton.vue                   // 话题页发布评论按钮组件
-│  │  │  ├─ backBar.vue                       // 返回顶部栏组件
-│  │  │  ├─ list.vue                                // 列表组件
+│  │  └─ image                             // 图片文件
+│  ├─ components                           // 页面
+│  │  ├─ public                            // 公共组件
+│  │  │  ├─ addButton.vue                  // 话题页发布评论按钮组件
+│  │  │  ├─ backBar.vue                    // 返回顶部栏组件
+│  │  │  ├─ list.vue                       // 列表组件
 │  │  │  ├─ publicFooter.vue               // 底部导航栏
-│  │  │  ├─ publicHeader.vue             // 头部导航栏
-│  │  │  ├─ publicTitle.vue                  // 公共标题栏
-│  │  │  ├─ spinner.vue                       // 加载组件
-│  │  │  ├─ swiper.vue                         // 首页banner组件
-│  │  │  └─ topicBanner.vue               // 话题banner组件
-│  │  ├─ detailPage.vue                      // 首页详情页
-│  │  ├─ editPage.vue                         // 发布评论页
-│  │  ├─ feedBack.vue                         // 反馈页
-│  │  ├─ goods.vue                              // 干货页
+│  │  │  ├─ publicHeader.vue               // 头部导航栏
+│  │  │  ├─ publicTitle.vue                // 公共标题栏
+│  │  │  ├─ spinner.vue                    // 加载组件
+│  │  │  ├─ swiper.vue                     // 首页banner组件
+│  │  │  └─ topicBanner.vue                // 话题banner组件
+│  │  ├─ detailPage.vue                    // 首页详情页
+│  │  ├─ editPage.vue                      // 发布评论页
+│  │  ├─ feedBack.vue                      // 反馈页
+│  │  ├─ goods.vue                         // 干货页
 │  │  ├─ goodsCharts.vue                   // 排行榜页
-│  │  ├─ goodsDetailPage.vue           // 干货详情页
-│  │  ├─ index.vue                               // 首页
-│  │  ├─ indexFourFour.vue               // 首页双列详情页4
-│  │  ├─ indexFourOne.vue               // 首页双列详情页1
-│  │  ├─ indexFourThree.vue             // 首页双列详情页3
-│  │  ├─ indexFourTwo.vue               // 首页双列详情页2
-│  │  ├─ login.vue                               // 登录页
-│  │  ├─ search.vue                            // 搜索页
-│  │  ├─ test.vue                                 // 测试页（备用）
-│  │  ├─ topic.vue                               // 话题页
-│  │  └─ user.vue                                // 用户页
+│  │  ├─ goodsDetailPage.vue               // 干货详情页
+│  │  ├─ index.vue                         // 首页
+│  │  ├─ indexFourFour.vue                 // 首页双列详情页4
+│  │  ├─ indexFourOne.vue                  // 首页双列详情页1
+│  │  ├─ indexFourThree.vue                // 首页双列详情页3
+│  │  ├─ indexFourTwo.vue                  // 首页双列详情页2
+│  │  ├─ login.vue                         // 登录页
+│  │  ├─ search.vue                        // 搜索页
+│  │  ├─ test.vue                          // 测试页（备用）
+│  │  ├─ topic.vue                         // 话题页
+│  │  └─ user.vue                          // 用户页
 │  ├─ router
-│  │  └─ index.js                                    //路由配置
+│  │  └─ index.js                          //路由配置
 │  ├─ vuex
-│  │  └─ store.js                                     // vuex配置
-│  ├─ App.vue                                       // 页面入口文件
-│  └─ main.js                                         // 程序入口文件
-├─ static                                                // 静态文件
-├─ .babelrc                                           // ES6语法编译配置
-├─ .editorconfig                                   // 代码编写规格配置
-├─ .gitignore                                        // git 忽略项
+│  │  └─ store.js                          // vuex配置
+│  ├─ App.vue                              // 页面入口文件
+│  └─ main.js                              // 程序入口文件
+├─ static                                  // 静态文件
+├─ .babelrc                                // ES6语法编译配置
+├─ .editorconfig                           // 代码编写规格配置
+├─ .gitignore                              // git 忽略项
 ├─ .postcssrc.js
-├─ LICENSE                                          // 许可证
-├─ README.md                                  // README
-├─ index.html                                      // html模板
-└─ package.json                                 // 配置依赖
+├─ LICENSE                                 // 许可证
+├─ README.md                               // README
+├─ index.html                              // html模板
+└─ package.json                            // 配置依赖
+```
+
 ### 运行效果
 ![这里写图片描述](http://img.blog.csdn.net/20170712082912304)
 
