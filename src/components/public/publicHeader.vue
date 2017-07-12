@@ -142,11 +142,13 @@
           this.$router.push('/search');
         }
       },
-      // created(){
-      //   this.$forceUpdate()
+      // activated(){
+      //   // this.$forceUpdate()
+      //   console.log("活了")
       // },
       // deactivated(){
-      //   this.$destroy()
+      //   // this.$destroy()
+      //   console.log("死了")
       // },
       props:[ 'menushow', 'headtitle' ]
     }

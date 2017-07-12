@@ -3,24 +3,23 @@
     <div class="backBar font">
       <mu-appbar>
         <mu-icon-button icon="arrow_back" slot="left" @click="routerBack"/>
-        <mu-text-field v-model="searchField" v-show="$route.meta.isSearch"  class="searchField" slot="right" hintText="请输入搜索内容"/>
-        <mu-icon-button v-show="$route.meta.isSearch" icon="search" slot="right" @click="search"/>
+        <mu-text-field  v-model="searchField" v-show="$route.meta.isSearch"  class="searchField" slot="right" hintText="请输入搜索内容"/>
+        <mu-icon-button  v-show="$route.meta.isSearch" icon="search" slot="right" @click="search"/>
       </mu-appbar>
     </div>
-    <spinner v-if='tranform'></spinner>
-    <div v-if='!tranform' class="detailMargin backAddFont">
+    <div  class="detailMargin backAddFont">
       <div v-if='searchBtn'>
         <h4 class="tag">热门标签：</h4>
-        <ul class="tagContent">
-          <li>九寨沟</li>
-          <li>成都</li>
-          <li>方特</li>
-          <li>熊猫基地</li>
-          <li>澳大利亚</li>
-          <li>都江堰</li>
-          <li>香港</li>
-          <li>武汉</li>
-        </ul>
+          <ul class="tagContent">
+            <li>九寨沟</li>
+            <li>成都</li>
+            <li>方特</li>
+            <li>熊猫基地</li>
+            <li>澳大利亚</li>
+            <li>都江堰</li>
+            <li>香港</li>
+            <li>武汉</li>
+          </ul>
       </div>
       <div v-if="searchEmpty" class="tag">
         提示：搜索结果为空
@@ -40,18 +39,21 @@
     left: 0;
     z-index:998;
   }
+
   .searchField{
     color: #FFF;
     margin-bottom: 0;
+    width: 100%;
+    margin-left: -20%;
   }
   .tagContent{
-    width: 80%;
+    width: 60%;
     overflow: auto;
     margin: 10px auto;
   }
   .tag{
     width: 80%;
-    padding: 10px 0;
+    padding: 20px 0;
     margin: 0 auto;
     overflow: auto;
     font-size: 16px;
@@ -59,7 +61,7 @@
   .tagContent li{
     float: left;
     margin: 5px;
-    width: 30%;
+    width: 45%;
     height: 30px;
     color: #8e8e8e;
     line-height: 24px;
@@ -73,7 +75,6 @@
   export default{
     data(){
       return{
-        // tranform: this.$store.state.tranform,
         searchBtn: this.$store.state.searchBtn,
         searchField: "",
         searchEmpty: false

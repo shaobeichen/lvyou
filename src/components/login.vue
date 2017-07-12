@@ -1,8 +1,7 @@
 <template>
   <div class=" detailMargin backAddFont">
     <backbar></backbar>
-    <spinner v-if='tranform'></spinner>
-    <div v-if='!tranform'>
+    <div >
       <mu-tabs :value="activeTab" @change="handleTabChange">
         <mu-tab value="login" title="登录"/>
         <mu-tab value="register" title="注册"/>
@@ -38,8 +37,6 @@
   export default{
     data () {
       return {
-        //loading动画
-        // tranform: this.$store.state.tranform,
         //登录注册切换
         activeTab: 'login',
         //登录用户名密码和注册登录密码
@@ -54,15 +51,8 @@
     },
     components: {
       backbar,
-      spinner
     },
     created(){
-      // //判断网络状态
-      // this.$http.get('https://api.leancloud.cn/1.1/classes/explore').then((success) => {
-      //   this.tranform = false;
-      // }, (error) => {
-      //   console.log(error)
-      // })
     },
     methods: {
       //使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用
