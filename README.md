@@ -5,8 +5,11 @@
 ![npm](https://img.shields.io/badge/npm-3.8.9-green.svg)                                     ![npm](https://img.shields.io/badge/vue-2.2.1-green.svg)              ![npm](https://img.shields.io/badge/vue--resource-1.2.1-green.svg)            ![npm](https://img.shields.io/badge/vue--router-2.2.0-green.svg)      ![npm](https://img.shields.io/badge/vuex-2.2.1-green.svg)
 
 > Vue.js 初步进阶案例，适合vue入门者进阶
+
 > 路由懒加载，进入页面前登录判断，返回导航判断，RestAPI接口使用，组件封装，Vuex状态封装，keep-alive页面缓存等
+
 > 旅游APP，为喜欢旅游的人专业提供旅游攻略，致力提升旅游体验。
+
 > 目前功能不全，后期会慢慢完善，诸多问题，还望各位见谅。
 
 
