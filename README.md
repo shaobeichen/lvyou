@@ -25,7 +25,7 @@
 ### 安装部署
 1.下载
 ```
-git alone https://github.com/zhou1178539345/lvyou.git
+git clone https://github.com/zhou1178539345/lvyou.git
 ```
 2.进入项目
 ```
