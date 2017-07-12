@@ -1,4 +1,4 @@
-<p align="center"><img src="http://img.blog.csdn.net/20170712114436594"  width="200"></p>
+<p align="center"><img src="http://img.blog.csdn.net/20170712114436594"  width="200" height="200"></p>
 
 # Lvyou
 
@@ -141,6 +141,7 @@ npm run build
 - leancloud
 - vue-awesome-swiper
 - vue-lazyload
+- Hbuild
 
 ### END
 这是本人深入vue系统所制作的一个webapp，由于接口使用的是leancloud，很多功能没有实现，后期想用node.js自己写RestAPI，再完善组件和界面。欢迎大家STAR！
