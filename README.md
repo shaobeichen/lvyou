@@ -49,7 +49,7 @@ npm run build
 ```
 ### 线上预览
  [线上预览地址](https://zhou1178539345.github.io/lvyou)
-
+登录测试账号：leachzhou 123456
 友情提示：建议在开发者模式适配下浏览网站
 
 ### 功能
@@ -135,7 +135,7 @@ npm run build
 
 ### APP
 [软件下载地址](https://service.dcloud.net.cn/build/download/510819a0-66ab-11e7-8b7a-378ae1349d49)
-软件使用Hbuild进行应用打包，另外制作了启动页和appIcon
+软件使用HBuilder进行应用打包，另外制作了启动页和appIcon
 
 ![这里写图片描述](http://img.blog.csdn.net/20170712110116741)
 
@@ -145,7 +145,7 @@ npm run build
 - leancloud
 - vue-awesome-swiper
 - vue-lazyload
-- Hbuild
+- HBuilder
 
 ### END
 这是本人深入vue系统所制作的一个webapp，由于接口使用的是leancloud，很多功能没有实现，后期想用node.js自己写RestAPI，再完善组件和界面。欢迎大家STAR！
