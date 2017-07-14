@@ -134,7 +134,7 @@ npm run build
 ![这里写图片描述](http://img.blog.csdn.net/20170712083045252)
 
 ### APP
-[软件下载地址](https://service.dcloud.net.cn/build/download/510819a0-66ab-11e7-8b7a-378ae1349d49)
+[软件下载地址](http://ot2v0dd6x.bkt.clouddn.com/H51CF16CE_0712104129.apk)
 软件使用HBuilder进行应用打包，另外制作了启动页和appIcon
 
 ![这里写图片描述](http://img.blog.csdn.net/20170712110116741)
