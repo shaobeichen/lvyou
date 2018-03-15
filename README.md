@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/zhou1178539345/lvyou/blob/master/READMEIMG/icon.png?raw=true"  width="200" height="200"></p>
 
-# Lvyou
+# Lvyou (现由于leancloud问题，无法查看线上demo)
 
 ![npm](https://img.shields.io/badge/npm-3.8.9-green.svg)                                     ![npm](https://img.shields.io/badge/vue-2.2.1-green.svg)              ![npm](https://img.shields.io/badge/vue--resource-1.2.1-green.svg)            ![npm](https://img.shields.io/badge/vue--router-2.2.0-green.svg)      ![npm](https://img.shields.io/badge/vuex-2.2.1-green.svg)
 
