@@ -47,10 +47,6 @@ npm run dev
 ```
 npm run build
 ```
-### 线上预览
- [线上预览地址](https://zhou1178539345.github.io/lvyou)
-登录测试账号：leachzhou 123456
-友情提示：建议在开发者模式适配下浏览网站
 
 ### 功能
 - 首页
