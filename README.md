@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/zhou1178539345/lvyou/blob/master/READMEIMG/icon.png?raw=true"  width="200" height="200"></p>
+<p align="center"><img src="https://github.com/LeachZhou/lvyou/blob/master/READMEIMG/icon.png?raw=true"  width="200" height="200"></p>
 
 # Lvyou (现由于leancloud问题，无法查看线上demo)
 
@@ -29,7 +29,7 @@
 ### 安装部署
 1.下载
 ```
-git clone https://github.com/zhou1178539345/lvyou.git
+git clone https://github.com/LeachZhou/lvyou.git
 ```
 2.进入项目
 ```
