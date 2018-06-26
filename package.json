@@ -6,12 +6,14 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "postinstall": "opencollective postinstall"
   },
   "dependencies": {
     "leancloud-realtime": "^3.5.1",
     "leancloud-storage": "^3.0.1",
     "muse-ui": "^2.0.0-rc.5",
+    "opencollective": "^1.0.3",
     "vue": "^2.2.1",
     "vue-awesome-swiper": "^2.3.2",
     "vue-lazyload": "^1.0.5",
@@ -64,5 +66,9 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/lvyou"
+  }
 }

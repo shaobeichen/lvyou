@@ -2,7 +2,7 @@
 
 # Lvyou (现由于leancloud问题，无法查看线上demo)
 
-![npm](https://img.shields.io/badge/npm-3.8.9-green.svg)                                     ![npm](https://img.shields.io/badge/vue-2.2.1-green.svg)              ![npm](https://img.shields.io/badge/vue--resource-1.2.1-green.svg)            ![npm](https://img.shields.io/badge/vue--router-2.2.0-green.svg)      ![npm](https://img.shields.io/badge/vuex-2.2.1-green.svg)
+[![Backers on Open Collective](https://opencollective.com/lvyou/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/lvyou/sponsors/badge.svg)](#sponsors) ![npm](https://img.shields.io/badge/npm-3.8.9-green.svg)                                     ![npm](https://img.shields.io/badge/vue-2.2.1-green.svg)              ![npm](https://img.shields.io/badge/vue--resource-1.2.1-green.svg)            ![npm](https://img.shields.io/badge/vue--router-2.2.0-green.svg)      ![npm](https://img.shields.io/badge/vuex-2.2.1-green.svg)
 
 > Vue.js 初步进阶案例，适合vue入门者进阶
 
@@ -145,3 +145,33 @@ npm run build
 
 ### END
 这是本人深入vue系统所制作的一个webapp，由于接口使用的是leancloud，很多功能没有实现，后期想用node.js自己写RestAPI，再完善组件和界面。欢迎大家STAR！
+
+## Contributors
+
+This project exists thanks to all the people who contribute. 
+<a href="graphs/contributors"><img src="https://opencollective.com/lvyou/contributors.svg?width=890&button=false" /></a>
+
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/lvyou#backer)]
+
+<a href="https://opencollective.com/lvyou#backers" target="_blank"><img src="https://opencollective.com/lvyou/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/lvyou#sponsor)]
+
+<a href="https://opencollective.com/lvyou/sponsor/0/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/lvyou/sponsor/1/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/lvyou/sponsor/2/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/lvyou/sponsor/3/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/lvyou/sponsor/4/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/lvyou/sponsor/5/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/lvyou/sponsor/6/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/lvyou/sponsor/7/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/lvyou/sponsor/8/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/lvyou/sponsor/9/website" target="_blank"><img src="https://opencollective.com/lvyou/sponsor/9/avatar.svg"></a>
+
+
